@@ -1,0 +1,22 @@
+//Tablet//
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+//Desktop//
+@mixin media-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+//Wide Screen//
+@mixin media-xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@import url("https://use.typekit.net/wmo1yjc.css");

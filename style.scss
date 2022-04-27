@@ -1,0 +1,252 @@
+
+@import "variables";
+
+
+body {
+    margin: 0;
+    height:auto;
+    font-family: "lato", sans-serif;
+    background-color: #8db9f8;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    
+}
+
+
+
+
+
+.intro {
+    background: url("/img/mountain.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.49%;
+    position: relative;
+    justify-content: center;
+    
+
+    .menu-btn {
+        z-index: 5;
+        position: absolute;
+        padding-left: 0.5rem;
+        top: 0;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    
+        &__line {
+            position: absolute;
+            bottom: 0;
+            top: 0.8rem;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            
+    
+            &::before {
+                position: absolute;
+                content:'';
+                top: -8px;
+                width: 30px;
+                height: 3px;
+                background-color: white;
+            }
+    
+            &::after {
+                position: absolute;
+                content:'';
+                top: 8px;
+                width: 30px;
+                height: 3px;
+                background-color: white;
+            }
+        }
+    }
+
+    .nav {
+        position: absolute;
+        top:0;
+        bottom:0;
+        font-size: 2vw;
+         
+       
+    
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            list-style: none;
+            background-color: rgba(0,0,0,.3);
+            color: #fff;
+            padding-top: 5.5vw;
+            padding-right: 1vw;
+            padding-left: 0.5rem;
+            padding-bottom: 0.5rem;
+            
+
+            &.open {
+                display: flex;
+            }
+
+            
+
+            
+
+            &__item {
+                line-height: 3vw;
+            }
+    
+            &__link {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+    
+
+    .intro-text {
+        display: flex;
+        position:absolute;
+        width: 100%;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        transform: translateY(4.5vw);
+        line-height: 6vw;
+        text-align: left;
+       
+        @include media-lg {
+            padding-top: 1vw;
+        }
+        
+        
+
+        &__phrase {
+            width: 80%;
+            display: flex;
+            color: #404642;
+            font-size: 4.5vw;
+            position: absolute;
+            padding-left: 19vw;
+           
+
+        }
+
+        &__word {
+            color: #737c54;
+            font-size: 4.5vw;
+            display:block;
+            position: absolute;
+            margin: 0 auto;
+            padding-top: 6vw;
+            left: 49vw;
+    }
+}
+
+    .skillstitle {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+       
+        
+        background-color: rgba(0,0,0,.3);
+        color: #fff;
+        text-align: center;
+        font-size: 3vw;
+        padding: 0 5vw;
+       
+    }
+}
+
+.skillsrow {
+
+    font-size:2.5vw;
+   column-count:2;
+   text-align: center;
+
+   @include media-lg {
+    column-count:3;
+   }
+        .skillsrow-item {
+
+        }
+    }
+
+
+
+.portfolio {
+    padding: 0 2rem;
+    
+}
+
+.contact {
+    padding: 0 2rem;
+    
+
+    .contact-logo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-box {
+
+        &__text1 {
+            color: blue;
+            display: none;
+        }
+
+        &__text2 {
+            color: red;
+            display: none;
+        }
+
+        &__text3 {
+            color: black;
+            display: none;
+
+        }
+
+        .open {
+            display: block;
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    padding: 0 2rem;
+    background-color: lightcyan;
+}
+
+
+
+
+
+
+
+@import "responsive";
