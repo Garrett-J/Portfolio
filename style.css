@@ -1,0 +1,236 @@
+@import url("https://use.typekit.net/wmo1yjc.css");
+body {
+  margin: 0;
+  height: auto;
+  font-family: "lato", sans-serif;
+  background-color: #8db9f8;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+.intro {
+  background: url("/img/mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 66.49%;
+  position: relative;
+  justify-content: center;
+}
+
+.intro .menu-btn {
+  z-index: 5;
+  position: absolute;
+  padding-left: 0.5rem;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.intro .menu-btn__line {
+  position: absolute;
+  bottom: 0;
+  top: 0.8rem;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+.intro .menu-btn__line::before {
+  position: absolute;
+  content: '';
+  top: -8px;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.intro .menu-btn__line::after {
+  position: absolute;
+  content: '';
+  top: 8px;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+.intro .nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 2vw;
+}
+
+.intro .nav .nav-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding-top: 5.5vw;
+  padding-right: 1vw;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.intro .nav .nav-menu.open {
+  display: flex;
+}
+
+.intro .nav .nav-menu__item {
+  line-height: 3vw;
+}
+
+.intro .nav .nav-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.intro .intro-text {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(4.5vw);
+  line-height: 6vw;
+  text-align: left;
+}
+
+@media screen and (min-width: 992px) {
+  .intro .intro-text {
+    padding-top: 1vw;
+  }
+}
+
+.intro .intro-text__phrase {
+  width: 80%;
+  display: flex;
+  color: #404642;
+  font-size: 4.5vw;
+  position: absolute;
+  padding-left: 19vw;
+}
+
+.intro .intro-text__word {
+  color: #737c54;
+  font-size: 4.5vw;
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  padding-top: 6vw;
+  left: 49vw;
+}
+
+.intro .skillstitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  font-size: 3vw;
+  padding: 0 5vw;
+}
+
+.skillsrow {
+  font-size: 2.5vw;
+  column-count: 2;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .skillsrow {
+    column-count: 3;
+  }
+}
+
+.portfolio {
+  padding: 0 2rem;
+}
+
+.contact {
+  padding: 0 2rem;
+}
+
+.contact .contact-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .contact-box__text1 {
+  color: blue;
+  display: none;
+}
+
+.contact .contact-box__text2 {
+  color: red;
+  display: none;
+}
+
+.contact .contact-box__text3 {
+  color: black;
+  display: none;
+}
+
+.contact .contact-box .open {
+  display: block;
+}
+
+.footer {
+  position: relative;
+  padding: 0 2rem;
+  background-color: lightcyan;
+}
+
+@media screen and (min-width: 992px) {
+  .intro .menu-btn {
+    visibility: hidden;
+  }
+  .intro .nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .intro .nav .nav-menu {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+  }
+  .intro .nav .nav-menu__item {
+    padding: 0 5rem;
+    line-height: normal;
+  }
+}
+/*# sourceMappingURL=style.css.map */
