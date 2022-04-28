@@ -1,6 +1,4 @@
-
 @import "variables";
-
 
 body {
     margin: 0;
@@ -31,12 +29,8 @@ p {
 
 ul {
     margin: 0;
-    
+
 }
-
-
-
-
 
 .intro {
     background: url("img/mountain.jpg");
@@ -47,7 +41,7 @@ ul {
     padding-top: 66.49%;
     position: relative;
     justify-content: center;
-    
+
 
     .menu-btn {
         z-index: 5;
@@ -57,7 +51,7 @@ ul {
         height: 30px;
         width: 30px;
         cursor: pointer;
-    
+
         &__line {
             position: absolute;
             bottom: 0;
@@ -65,8 +59,7 @@ ul {
             width: 25px;
             height: 3px;
             background-color: white;
-            
-    
+
             &::before {
                 position: absolute;
                 content:'';
@@ -75,7 +68,7 @@ ul {
                 height: 3px;
                 background-color: white;
             }
-    
+
             &::after {
                 position: absolute;
                 content:'';
@@ -91,41 +84,34 @@ ul {
         position: absolute;
         top:0;
         bottom:0;
-        font-size: 2vw;
-         
-       
-    
+
         .nav-menu {
             display: none;
             flex-direction: column;
             list-style: none;
-            background-color: rgba(0,0,0,.3);
+            background-color: rgba(0,0,0,.7);
             color: #fff;
-            padding-top: 5.5vw;
+            padding-top: 3.5rem;
             padding-right: 1vw;
             padding-left: 0.5rem;
             padding-bottom: 0.5rem;
-            
 
             &.open {
                 display: flex;
             }
 
-            
-
-            
-
             &__item {
-                line-height: 3vw;
+                line-height: 7vw;
+                font-size: 3vw;
+                z-index: 4;
             }
-    
+
             &__link {
                 text-decoration: none;
                 color: #fff;
             }
         }
     }
-    
 
     .intro-text {
         display: flex;
@@ -135,78 +121,59 @@ ul {
         bottom:0;
         left:0;
         right:0;
-        transform: translateY(4.5vw);
+        transform: translateY(3vw);
         line-height: 6vw;
         text-align: left;
-       
-        @include media-lg {
-            padding-top: 1vw;
-        }
-        
-        
 
         &__phrase {
             width: 80%;
             display: flex;
             color: #404642;
-            font-size: 4.5vw;
+            font-size: 5vw;
             position: absolute;
             padding-left: 19vw;
-           
-
         }
 
         &__word {
             color: #737c54;
-            font-size: 4.5vw;
+            font-size: 5vw;
             display:block;
             position: absolute;
             margin: 0 auto;
             padding-top: 6vw;
-            left: 49vw;
+            left: 52vw;
+        }
     }
-}
 
     .skillstitle {
         position: absolute;
         bottom: 0;
         left:0;
         right:0;
-       
-        
         background-color: rgba(0,0,0,.3);
         color: #fff;
         text-align: center;
         font-size: 3vw;
         padding: 0 5vw;
-       
+        }
     }
-}
 
 .skillsrow {
-
     font-size:2.5vw;
-   column-count:2;
-   text-align: center;
+    column-count:2;
+    text-align: center;
 
    @include media-lg {
     column-count:3;
    }
-        .skillsrow-item {
-
-        }
-    }
-
-
+}
 
 .portfolio {
     padding: 0 2rem;
-    
 }
 
 .contact {
     padding: 0 2rem;
-    
 
     .contact-logo {
         display: flex;
@@ -228,7 +195,6 @@ ul {
         &__text3 {
             color: black;
             display: none;
-
         }
 
         .open {
