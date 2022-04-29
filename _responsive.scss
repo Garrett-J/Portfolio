@@ -1,46 +1,45 @@
-
 @include media-lg {
 
-.intro {
-
-    .menu-btn {
-        visibility: hidden;
-    }
-
-    .nav {
-        position: absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-
-            .nav-menu {
-                padding: 0.5vw 0 0.5vw 0;
-                display: flex;
-                flex-direction: row;
-                list-style: none;
-                justify-content: center;
-                overflow: hidden;
-
-                &__item {
-                    padding: 0 8vw;
-                    line-height: normal;
-                    font-size: 1.5vw;
-                }
+    .intro {
+    
+        .menu-btn {
+            visibility: hidden;
+        }
+    
+        .nav {
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+    
+                .nav-menu {
+                    padding: 0.5vw 0 0.5vw 0;
+                    display: flex;
+                    flex-direction: row;
+                    list-style: none;
+                    justify-content: center;
+                    overflow: hidden;
+    
+                    &__item {
+                        padding: 0 8vw;
+                        line-height: normal;
+                        font-size: 1.5vw;
+                    }
+            }
+        }
+    
+        .intro-text {
+            transform: translateY(4.5vw);
+    
+            &__phrase {
+                padding-left: 14.5vw;
+            }
+    
+            &__word {
+                left: 47.5vw;
+            }
+            
         }
     }
-
-    .intro-text {
-        transform: translateY(4.5vw);
-
-        &__phrase {
-            padding-left: 14.5vw;
-        }
-
-        &__word {
-            left: 47.5vw;
-        }
-        
     }
-}
-}

@@ -159,12 +159,39 @@ ul {
     }
 
 .skillsrow {
-    font-size:2.5vw;
+    line-height:2rem;
+    font-size: 3.5vw;
+    font-weight: bold;
     column-count:2;
     text-align: center;
 
    @include media-lg {
     column-count:3;
+    font-size: 2.5vw;
+    line-height:3rem;
+   }
+        figure {
+        height: 7rem;
+        padding-top: 1rem;
+        width: 60%;
+        display:inline-block;
+        text-align: center;
+
+        @include media-lg {
+            height: 10rem;
+        }
+
+       .skillsrow-img {
+               vertical-align: top;
+               width: 4rem;
+
+               @include media-lg {
+                width: 5rem;
+               }
+           }
+        figcaption {
+            padding-top: 1rem;
+        }
    }
 }
 

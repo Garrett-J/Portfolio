@@ -156,7 +156,9 @@ ul {
 }
 
 .skillsrow {
-  font-size: 2.5vw;
+  line-height: 2rem;
+  font-size: 3.5vw;
+  font-weight: bold;
   column-count: 2;
   text-align: center;
 }
@@ -164,7 +166,38 @@ ul {
 @media screen and (min-width: 992px) {
   .skillsrow {
     column-count: 3;
+    font-size: 2.5vw;
+    line-height: 3rem;
   }
+}
+
+.skillsrow figure {
+  height: 7rem;
+  padding-top: 1rem;
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .skillsrow figure {
+    height: 10rem;
+  }
+}
+
+.skillsrow figure .skillsrow-img {
+  vertical-align: top;
+  width: 4rem;
+}
+
+@media screen and (min-width: 992px) {
+  .skillsrow figure .skillsrow-img {
+    width: 5rem;
+  }
+}
+
+.skillsrow figure figcaption {
+  padding-top: 1rem;
 }
 
 .portfolio {
