@@ -10,6 +10,11 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+    margin: 0;
+    color: inherit;
+}
 
 h1 {
     margin: 0;
@@ -42,77 +47,6 @@ ul {
     position: relative;
     justify-content: center;
 
-
-    .menu-btn {
-        z-index: 5;
-        position: absolute;
-        padding-left: 0.5rem;
-        top: 0;
-        height: 30px;
-        width: 30px;
-        cursor: pointer;
-
-        &__line {
-            position: absolute;
-            bottom: 0;
-            top: 0.8rem;
-            width: 25px;
-            height: 3px;
-            background-color: white;
-
-            &::before {
-                position: absolute;
-                content:'';
-                top: -8px;
-                width: 30px;
-                height: 3px;
-                background-color: white;
-            }
-
-            &::after {
-                position: absolute;
-                content:'';
-                top: 8px;
-                width: 30px;
-                height: 3px;
-                background-color: white;
-            }
-        }
-    }
-
-    .nav {
-        position: absolute;
-        top:0;
-        bottom:0;
-
-        .nav-menu {
-            display: none;
-            flex-direction: column;
-            list-style: none;
-            background-color: rgba(0,0,0,.7);
-            color: #fff;
-            padding-top: 3.5rem;
-            padding-right: 1vw;
-            padding-left: 0.5rem;
-            padding-bottom: 0.5rem;
-
-            &.open {
-                display: flex;
-            }
-
-            &__item {
-                line-height: 7vw;
-                font-size: 3vw;
-                z-index: 4;
-            }
-
-            &__link {
-                text-decoration: none;
-                color: #fff;
-            }
-        }
-    }
-
     .intro-text {
         display: flex;
         position:absolute;
@@ -121,7 +55,7 @@ ul {
         bottom:0;
         left:0;
         right:0;
-        transform: translateY(3vw);
+        transform: translateY(2.5vw);
         line-height: 6vw;
         text-align: left;
 
@@ -131,7 +65,7 @@ ul {
             color: #404642;
             font-size: 5vw;
             position: absolute;
-            padding-left: 19vw;
+            padding-left: 14.5vw;
         }
 
         &__word {
@@ -141,11 +75,36 @@ ul {
             position: absolute;
             margin: 0 auto;
             padding-top: 6vw;
-            left: 52vw;
+            left: 47.5vw;
         }
     }
 
-    .skillstitle {
+    .contact {
+        font-size: 8vw;
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display:flex;
+        line-height: 9vw;
+
+        .contact-icon {
+            color:black;
+            position:relative;
+            margin: 0 10vw;
+
+            &:hover {
+                color: #737c54;
+            }
+
+            &__text {
+                font-size: 4vw;
+            }
+        }
+    }
+
+    .projectstitle {
         position: absolute;
         bottom: 0;
         left:0;
@@ -158,76 +117,114 @@ ul {
         }
     }
 
-.skillsrow {
-    line-height:2rem;
-    font-size: 3.5vw;
-    font-weight: bold;
-    column-count:2;
-    text-align: center;
+.projectsection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 2rem;
 
-   @include media-lg {
-    column-count:3;
-    font-size: 2.5vw;
-    line-height:3rem;
-   }
-        figure {
-        height: 7rem;
-        padding-top: 1rem;
-        width: 60%;
-        display:inline-block;
+    @include media-lg {
+        flex-direction: row;
+    }
+}
+
+.project {
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+    border-style:solid;
+    
+    
+
+    @include media-lg {
+        width: 50vw;
+        
+    }
+
+    .project-name {
         text-align: center;
+        background-color: #737c54;
+    }
+
+    .project-container {
+        flex-direction: row;
+        padding: 1rem 1rem;
 
         @include media-lg {
-            height: 10rem;
+            flex-direction: column;
+            padding: 1rem 1rem 1rem 0;
         }
+    }
 
-       .skillsrow-img {
-               vertical-align: top;
-               width: 4rem;
-
-               @include media-lg {
-                width: 5rem;
-               }
-           }
-        figcaption {
-            padding-top: 1rem;
-        }
-   }
-}
-
-.portfolio {
-    padding: 0 2rem;
-}
-
-.contact {
-    padding: 0 2rem;
-
-    .contact-logo {
+    .project-info {
         display: flex;
         flex-direction: column;
+        
+
+        @include media-lg {
+            flex-direction: row;
+        }
+
+      &__container {
+        height: 232px;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+      }
+
+        &__img {
+            margin: 0 auto;
+           width: 200px;
+           height: 200px;
+            padding: 1rem 1rem;
+        }
+
+        &__live {
+           position: relative;
+           top: 60px;
+           z-index: 3;
+           position: absolute;
+           left: 20px;
+        }
+
+        &__code {
+            position: relative;
+            top: 150px;
+            z-index: 3;
+            position: absolute;
+            left: 120px;
+         }
+
+        &__goalstext {
+            padding: 1rem 0;
+            text-align: center;
+
+            @include media-lg {
+                text-align: left;
+            }
+        }
+
+        &__goalstitle {
+            text-align: center;
+        }
     }
 
-    .contact-box {
 
-        &__text1 {
-            color: blue;
-            display: none;
-        }
+    .project-tools {
 
-        &__text2 {
-            color: red;
-            display: none;
-        }
+        text-align: center;
 
-        &__text3 {
-            color: black;
-            display: none;
-        }
+        &__list {
+            padding: 1rem 0;
+            text-align: center;
 
-        .open {
-            display: block;
+            @include media-lg {
+                text-align: left;
+            }
         }
     }
+
+    
 }
 
 .footer {
