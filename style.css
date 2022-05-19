@@ -88,12 +88,14 @@ ul {
   text-align: center;
   display: flex;
   line-height: 9vw;
+  padding: 0 3vw;
+  justify-content: center;
 }
 
 .intro .contact .contact-icon {
   color: black;
   position: relative;
-  margin: 0 10vw;
+  margin: 0 9vw;
 }
 
 .intro .contact .contact-icon:hover {
@@ -101,7 +103,7 @@ ul {
 }
 
 .intro .contact .contact-icon__text {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .intro .projectstitle {
@@ -119,6 +121,7 @@ ul {
 .projectsection {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 0 2rem;
   gap: 2rem;
 }
@@ -138,7 +141,7 @@ ul {
 
 @media screen and (min-width: 992px) {
   .project {
-    width: 50vw;
+    flex: 48%;
   }
 }
 
@@ -149,13 +152,13 @@ ul {
 
 .project .project-container {
   flex-direction: row;
-  padding: 1rem 1rem;
+  padding: 0 2rem;
 }
 
 @media screen and (min-width: 992px) {
   .project .project-container {
     flex-direction: column;
-    padding: 1rem 1rem 1rem 0;
+    padding: 2rem 2rem 1rem 3rem;
   }
 }
 
@@ -171,33 +174,60 @@ ul {
 }
 
 .project .project-info__container {
-  height: 232px;
   position: relative;
-  margin: 0 auto;
-  display: flex;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .project .project-info__container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
 }
 
 .project .project-info__img {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  padding: 1rem 1rem;
+  display: block;
 }
 
 .project .project-info__live {
-  position: relative;
-  top: 60px;
-  z-index: 3;
   position: absolute;
-  left: 20px;
+  background: rgba(161, 161, 161, 0.8);
+  left: 0;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  font-size: 30px;
+  line-height: 100px;
+  font-weight: 900;
+}
+
+.project .project-info__live:hover {
+  color: white;
+  background-color: #737c54;
 }
 
 .project .project-info__code {
-  position: relative;
-  top: 150px;
-  z-index: 3;
   position: absolute;
-  left: 120px;
+  background: rgba(161, 161, 161, 0.8);
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  font-size: 30px;
+  line-height: 100px;
+  font-weight: 900;
+}
+
+.project .project-info__code:hover {
+  color: white;
+  background-color: #737c54;
 }
 
 .project .project-info__goalstext {
@@ -215,8 +245,20 @@ ul {
   text-align: center;
 }
 
+@media screen and (min-width: 992px) {
+  .project .project-info__goalstitle {
+    text-align: left;
+  }
+}
+
 .project .project-tools {
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .project .project-tools {
+    text-align: left;
+  }
 }
 
 .project .project-tools__list {
