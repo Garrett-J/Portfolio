@@ -88,18 +88,20 @@ ul {
         text-align: center;
         display:flex;
         line-height: 9vw;
+        padding: 0 3vw;
+        justify-content: center;
 
         .contact-icon {
             color:black;
             position:relative;
-            margin: 0 10vw;
+            margin: 0 9vw;
 
             &:hover {
                 color: #737c54;
             }
 
             &__text {
-                font-size: 4vw;
+                font-size: 3vw;
             }
         }
     }
@@ -120,11 +122,16 @@ ul {
 .projectsection {
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
     padding: 0 2rem;
     gap: 2rem;
+    
+  
 
     @include media-lg {
         flex-direction: row;
+        
+        
     }
 }
 
@@ -133,12 +140,12 @@ ul {
     margin: 2rem 0;
     flex-direction: column;
     border-style:solid;
-    
+
     
 
     @include media-lg {
-        width: 50vw;
-        
+        flex: 48%;
+
     }
 
     .project-name {
@@ -148,51 +155,78 @@ ul {
 
     .project-container {
         flex-direction: row;
-        padding: 1rem 1rem;
+        padding: 0 2rem;
 
         @include media-lg {
             flex-direction: column;
-            padding: 1rem 1rem 1rem 0;
+            padding: 2rem 2rem 1rem 3rem;
         }
     }
 
     .project-info {
         display: flex;
         flex-direction: column;
-        
 
         @include media-lg {
             flex-direction: row;
         }
 
       &__container {
-        height: 232px;
         position: relative;
-        margin: 0 auto;
-        display: flex;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 2rem auto;
+        text-align: center;
+
+        @include media-lg {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        
+        }
       }
 
         &__img {
             margin: 0 auto;
-           width: 200px;
-           height: 200px;
-            padding: 1rem 1rem;
+            width: 200px;
+            height: 200px;
+            display: block;
         }
 
         &__live {
-           position: relative;
-           top: 60px;
-           z-index: 3;
            position: absolute;
-           left: 20px;
+           background: rgba(161, 161, 161, 0.8);
+           left: 0;
+           top: 0;
+           height: 50%;
+           width: 100%;
+           font-size: 30px;
+           
+           line-height: 100px;
+           font-weight: 900;
+
+           &:hover {
+            color: white;
+            background-color: #737c54;
+        }
+
         }
 
         &__code {
-            position: relative;
-            top: 150px;
-            z-index: 3;
             position: absolute;
-            left: 120px;
+            background: rgba(161, 161, 161, 0.8);
+            right: 0;
+            bottom: 0;
+            height: 50%;
+            width: 100%;
+            font-size: 30px;
+            line-height: 100px;
+            font-weight: 900;
+
+            &:hover {
+                color: white;
+                background-color: #737c54;
+            }
          }
 
         &__goalstext {
@@ -206,6 +240,10 @@ ul {
 
         &__goalstitle {
             text-align: center;
+
+            @include media-lg {
+                text-align: left;
+            }
         }
     }
 
@@ -213,6 +251,10 @@ ul {
     .project-tools {
 
         text-align: center;
+
+        @include media-lg {
+            text-align: left;
+        }
 
         &__list {
             padding: 1rem 0;
