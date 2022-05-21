@@ -42,9 +42,22 @@ ul {
   background-repeat: no-repeat;
   width: 100%;
   height: 0;
-  padding-top: 66.49%;
+  padding-top: 100%;
   position: relative;
   justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    background: url("img/mountain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.49%;
+    position: relative;
+    justify-content: center;
+  }
 }
 
 .intro .intro-text {
@@ -56,46 +69,110 @@ ul {
   left: 0;
   right: 0;
   transform: translateY(2.5vw);
-  line-height: 6vw;
+  line-height: 8vw;
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .intro-text {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(2.5vw);
+    line-height: 6vw;
+    text-align: left;
+  }
 }
 
 .intro .intro-text__phrase {
   width: 80%;
   display: flex;
   color: #404642;
-  font-size: 5vw;
+  font-size: 8vw;
   position: absolute;
   padding-left: 14.5vw;
 }
 
+@media screen and (min-width: 768px) {
+  .intro .intro-text__phrase {
+    width: 80%;
+    display: flex;
+    color: #404642;
+    font-size: 5vw;
+    position: absolute;
+    padding-left: 14.5vw;
+  }
+}
+
 .intro .intro-text__word {
   color: #737c54;
-  font-size: 5vw;
+  font-size: 8vw;
   display: block;
   position: absolute;
   margin: 0 auto;
-  padding-top: 6vw;
-  left: 47.5vw;
+  padding-top: 16vw;
+  left: 29vw;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .intro-text__word {
+    color: #737c54;
+    font-size: 5vw;
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 6vw;
+    left: 47.5vw;
+  }
 }
 
 .intro .contact {
-  font-size: 8vw;
+  font-size: 16vw;
   position: absolute;
-  bottom: 30%;
+  bottom: 10%;
   left: 0;
   right: 0;
   text-align: center;
   display: flex;
-  line-height: 9vw;
-  padding: 0 3vw;
+  line-height: 10vw;
+  padding: 0 10vw;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .contact {
+    font-size: 8vw;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    line-height: 9vw;
+    padding: 0 3vw;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
 
 .intro .contact .contact-icon {
   color: black;
   position: relative;
-  margin: 0 9vw;
+  margin: 0 10vw;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .contact .contact-icon {
+    color: black;
+    position: relative;
+    margin: 0 9vw;
+  }
 }
 
 .intro .contact .contact-icon:hover {
@@ -103,7 +180,13 @@ ul {
 }
 
 .intro .contact .contact-icon__text {
-  font-size: 3vw;
+  font-size: 5vw;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .contact .contact-icon__text {
+    font-size: 3vw;
+  }
 }
 
 .intro .projectstitle {
