@@ -3,7 +3,8 @@ body {
   margin: 0;
   height: auto;
   font-family: "lato", sans-serif;
-  background-color: #8db9f8;
+  background-color: #2CBF6C;
+  color: white;
   width: 100%;
   height: 100%;
   padding: 0px;
@@ -36,103 +37,61 @@ ul {
   margin: 0;
 }
 
-.intro {
-  background: url("img/mountain.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 0;
-  padding-top: 100%;
-  position: relative;
-  justify-content: center;
+.line {
+  display: block;
+  width: 30%;
+  border-top: 3px solid #84D9B1;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
-  .intro {
-    background: url("img/mountain.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 66.49%;
-    position: relative;
-    justify-content: center;
-  }
+.intro {
+  width: 100%;
 }
 
 .intro .intro-text {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(2.5vw);
+  display: block;
+  width: auto;
   line-height: 8vw;
   text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  .intro .intro-text {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(2.5vw);
-    line-height: 6vw;
-    text-align: left;
-  }
+  padding: 10% 10% 0 15%;
 }
 
 .intro .intro-text__phrase {
   width: 80%;
   display: flex;
-  color: #404642;
-  font-size: 8vw;
-  position: absolute;
-  padding-left: 14.5vw;
+  color: white;
+  font-size: 6vw;
+  padding-left: 7vw;
+  padding-bottom: 20vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .intro .intro-text__phrase {
-    width: 80%;
-    display: flex;
-    color: #404642;
     font-size: 5vw;
-    position: absolute;
-    padding-left: 14.5vw;
+    padding-left: 5vw;
   }
 }
 
 .intro .intro-text__word {
-  color: #737c54;
-  font-size: 8vw;
-  display: block;
+  color: #071540;
+  font-size: 6vw;
   position: absolute;
-  margin: 0 auto;
-  padding-top: 16vw;
-  left: 29vw;
+  left: 22vw;
+  top: 26vw;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .intro .intro-text__word {
-    color: #737c54;
+    width: 80%;
+    display: flex;
+    top: 25vw;
+    left: 20vw;
     font-size: 5vw;
-    display: block;
-    position: absolute;
-    margin: 0 auto;
-    padding-top: 6vw;
-    left: 47.5vw;
   }
 }
 
 .intro .contact {
   font-size: 16vw;
-  position: absolute;
   bottom: 10%;
   left: 0;
   right: 0;
@@ -148,7 +107,6 @@ ul {
 @media screen and (min-width: 768px) {
   .intro .contact {
     font-size: 8vw;
-    position: absolute;
     bottom: 30%;
     left: 0;
     right: 0;
@@ -162,21 +120,20 @@ ul {
 }
 
 .intro .contact .contact-icon {
-  color: black;
+  color: white;
   position: relative;
-  margin: 0 10vw;
+  margin: 5vw 15vw;
 }
 
 @media screen and (min-width: 768px) {
   .intro .contact .contact-icon {
-    color: black;
     position: relative;
     margin: 0 9vw;
   }
 }
 
 .intro .contact .contact-icon:hover {
-  color: #737c54;
+  color: #071540;
 }
 
 .intro .contact .contact-icon__text {
@@ -189,25 +146,19 @@ ul {
   }
 }
 
-.intro .projectstitle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
+.projecttitle {
+  padding-top: 10VW;
   text-align: center;
   font-size: 3vw;
-  padding: 0 5vw;
 }
 
 .projectsection {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 2rem;
+  padding: 3rem 3rem;
   gap: 2rem;
-  row-gap: 0;
+  row-gap: 2rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -218,9 +169,10 @@ ul {
 
 .project {
   display: flex;
-  margin-top: 2rem;
   flex-direction: column;
-  border-style: solid;
+  background-color: #071540;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -231,7 +183,8 @@ ul {
 
 .project .project-name {
   text-align: center;
-  background-color: #737c54;
+  padding-top: 2rem;
+  background-color: #06133a;
 }
 
 .project .project-container {
@@ -278,6 +231,7 @@ ul {
   width: 200px;
   height: 200px;
   display: block;
+  border-radius: 20px;
 }
 
 .project .project-info__live {
@@ -288,13 +242,15 @@ ul {
   height: 50%;
   width: 100%;
   font-size: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   line-height: 100px;
   font-weight: 900;
 }
 
 .project .project-info__live:hover {
   color: white;
-  background-color: #737c54;
+  background-color: #41BF78;
 }
 
 .project .project-info__code {
@@ -305,13 +261,15 @@ ul {
   height: 50%;
   width: 100%;
   font-size: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   line-height: 100px;
   font-weight: 900;
 }
 
 .project .project-info__code:hover {
   color: white;
-  background-color: #737c54;
+  background-color: #41BF78;
 }
 
 .project .project-info__goalstext {
@@ -359,6 +317,5 @@ ul {
 .footer {
   position: relative;
   padding: 0 2rem;
-  background-color: lightcyan;
 }
 /*# sourceMappingURL=style.css.map */
