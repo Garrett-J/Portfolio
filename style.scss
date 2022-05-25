@@ -175,7 +175,6 @@ ul {
 
 .project {
     display: flex;
-    
     flex-direction: column;
     background-color: #071540;
     border-radius: 20px;
@@ -191,26 +190,28 @@ ul {
 
     .project-name {
         text-align: center;
-        padding-top: 2rem;
+        padding: 2rem 2rem;
         background-color: #06133a;
     }
 
     .project-container {
         flex-direction: row;
-        padding: 0 2rem;
+        padding: 0 4rem;
 
         @include media-lg {
             flex-direction: column;
-            padding: 2rem 2rem 1rem 3rem;
+            padding: 2rem 4rem 1rem 4rem;
         }
     }
 
     .project-info {
         display: flex;
         flex-direction: column;
+        
 
         @include media-lg {
             flex-direction: row;
+            padding-left: 2rem;
         }
 
       &__container {
@@ -234,6 +235,7 @@ ul {
             height: 200px;
             display: block;
             border-radius: 20px;
+            
         }
 
         &__live {
@@ -295,7 +297,7 @@ ul {
 
 
     .project-tools {
-
+        padding-top: 1rem;
         text-align: center;
 
         @include media-lg {
@@ -303,7 +305,7 @@ ul {
         }
 
         &__list {
-            padding: 1rem 0;
+            padding: 1rem 0 2rem 0;
             text-align: center;
 
             @include media-lg {
