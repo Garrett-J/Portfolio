@@ -54,40 +54,31 @@ ul {
   height: 100vh;
   display: flex;
   flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
   text-align: center;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .intro .intro-text {
+  max-width: 80%;
   display: flex;
-  width: 90%;
-  max-height: 100vh;
-  font-size: 2rem;
-  line-height: 4rem;
-  text-align: left;
-  align-self: center;
-  margin-left: 10vw;
-  padding-top: 30vw;
+  font-size: calc(21px + 1.5vw);
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
   .intro .intro-text {
-    width: 80%;
-    font-size: 3rem;
-    line-height: 6rem;
-    margin-left: 10vw;
-    padding-top: 8vw;
+    max-width: 80%;
+    font-size: calc(28px + 1.5vw);
+    line-height: 1.5;
   }
 }
 
 @media screen and (min-width: 992px) {
   .intro .intro-text {
-    width: 70%;
-    font-size: 4vw;
-    line-height: 7vw;
-    margin-left: 10vw;
-    padding-top: 2vw;
+    max-width: 80%;
+    font-size: calc(28px + 1.5vw);
+    line-height: 1.5;
   }
 }
 
@@ -100,31 +91,23 @@ ul {
 }
 
 .intro .contact {
-  max-width: 90%;
-  font-size: 4rem;
+  font-size: calc(50px + 9.5vw);
   text-align: center;
   display: flex;
-  margin-top: auto;
-  justify-content: center;
-  align-content: center;
   flex-direction: row;
-  margin-bottom: 20vw;
   gap: 20vw;
-  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
   .intro .contact {
-    font-size: 9rem;
+    font-size: calc(50px + 9.5vw);
     flex-direction: row;
-    margin-bottom: 5vw;
   }
 }
 
 @media screen and (min-width: 992px) {
   .intro .contact {
-    font-size: 10rem;
-    margin-bottom: 5vw;
+    font-size: calc(28px + 9.5vw);
   }
 }
 
@@ -142,12 +125,20 @@ ul {
 
 .intro .arrowcontainer {
   display: flex;
-  align-self: center;
-  justify-content: center;
 }
 
 .intro .fa-angle-down {
-  font-size: 5vw;
+  font-size: 15vw;
+}
+
+.intro .fa-angle-down:hover {
+  color: #071540;
+}
+
+@media screen and (min-width: 768px) {
+  .intro .fa-angle-down {
+    font-size: 5vw;
+  }
 }
 
 .projecttitle {

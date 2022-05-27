@@ -48,6 +48,8 @@ ul {
     border-top: 3px solid #84D9B1;
     margin: 0 auto;
     padding-bottom: 2rem;
+    
+    
 }
 
 .intro {
@@ -55,73 +57,58 @@ ul {
     height: 100vh;
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
-    justify-content: center;
-    align-items: flex-start;
+    
 
     .intro-text {
+        max-width: 80%;
         display: flex;
-        width: 90%;
-        max-height: 100vh;
-        font-size: 2rem;
-        line-height: 4rem;
-        text-align: left;
-        align-self: center;
-        margin-left: 10vw;
-        padding-top: 30vw;
+        font-size: calc(21px + 1.5vw);
+        line-height: 1.5;
+       
+        
 
             @include media-md {
-                width: 80%;
-                font-size: 3rem;
-                line-height: 6rem;
-                margin-left: 10vw;
-                padding-top:8vw;
+                max-width: 80%;
+                font-size: calc(28px + 1.5vw);
+                line-height: 1.5;
+                
             }
             
             @include media-lg {
-                width: 70%;
-                font-size: 4vw;
-                line-height: 7vw;
-                margin-left: 10vw;
-                padding-top:2vw;
+                max-width: 80%;
+                font-size: calc(28px + 1.5vw);
+                line-height: 1.5;
             }
 
         &__phrase {
             color: white;
-            
-            
         }
 
         &__word {
             color: #071540;
-            
         }
     }
 
     .contact {
-        max-width: 90%;
-        font-size: 4rem;
+        
+        font-size: calc(50px + 9.5vw);
         text-align: center;
         display: flex;
-        margin-top: auto;
-        justify-content: center;
-        align-content: center;
         flex-direction: row;
-        margin-bottom: 20vw;
         gap: 20vw;
-        align-self: center;
+      
         
 
         @include media-md {
-            font-size: 9rem;
+            font-size: calc(50px + 9.5vw);
             flex-direction: row;
-            margin-bottom: 5vw;
         }
 
         @include media-lg {
-            font-size: 10rem;
-            
-            margin-bottom: 5vw;
+            font-size: calc(28px + 9.5vw);
         }
 
         .contact-icon {
@@ -140,13 +127,20 @@ ul {
 
     .arrowcontainer {
         display: flex;
-        align-self: center;
-        justify-content: center;
+        
     }
 
     .fa-angle-down {
-        font-size: 5vw;
+        font-size: 15vw;
         
+
+        &:hover {
+            color: #071540;
+        }
+
+        @include media-md {
+          font-size: 5vw;
+        }
     }
     }
 
