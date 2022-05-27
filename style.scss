@@ -1,5 +1,9 @@
 @import "variables";
 
+
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     height:auto;
@@ -47,131 +51,123 @@ ul {
 }
 
 .intro {
-    width: 100%;
-
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
 
     .intro-text {
-        display: block;
-        width:auto;
-        line-height: 8vw;
+        display: flex;
+        width: 90%;
+        max-height: 100vh;
+        font-size: 2rem;
+        line-height: 4rem;
         text-align: left;
-        padding: 10% 10% 0 15%;
+        align-self: center;
+        margin-left: 10vw;
+        padding-top: 30vw;
+
+            @include media-md {
+                width: 80%;
+                font-size: 3rem;
+                line-height: 6rem;
+                margin-left: 10vw;
+                padding-top:8vw;
+            }
+            
+            @include media-lg {
+                width: 70%;
+                font-size: 4vw;
+                line-height: 7vw;
+                margin-left: 10vw;
+                padding-top:2vw;
+            }
 
         &__phrase {
-            width: 80%;
-            display: flex;
             color: white;
-            font-size: 6vw;
-            padding-left: 7vw;
-            padding-bottom: 20vw;
             
-
-            @include media-lg {
-                font-size: 5vw;
-                padding-left: 5vw;
-            }
+            
         }
 
         &__word {
             color: #071540;
-            font-size: 6vw;
-            position: absolute;
-            left: 22vw;
-            top: 26vw;
-
-            @include media-lg {
-            width: 80%;
-            display: flex;
-            top: 25vw;
-            left: 20vw;
             
-            font-size: 5vw;
-                
-               
-            }
         }
     }
 
     .contact {
-        font-size: 16vw;
-        bottom: 10%;
-        left: 0;
-        right: 0;
+        max-width: 90%;
+        font-size: 4rem;
         text-align: center;
-        display:flex;
-        line-height: 10vw;
-        padding: 0 10vw;
+        display: flex;
+        margin-top: auto;
         justify-content: center;
+        align-content: center;
         flex-direction: row;
-        flex-wrap: wrap;
+        margin-bottom: 20vw;
+        gap: 20vw;
+        align-self: center;
+        
 
         @include media-md {
-            font-size: 8vw;
-            
-            bottom: 30%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            display:flex;
-            line-height: 9vw;
-            padding: 0 3vw;
-            justify-content: center;
+            font-size: 9rem;
             flex-direction: row;
+            margin-bottom: 5vw;
+        }
+
+        @include media-lg {
+            font-size: 10rem;
+            
+            margin-bottom: 5vw;
         }
 
         .contact-icon {
             color:white;
-            position:relative;
-            margin: 5vw 15vw;
-
-            @include media-md {
-                
-            position:relative;
-            margin: 0 9vw;
-            
-            }
+           
 
             &:hover {
                 color: #071540;
             }
 
             &__text {
-                font-size: 5vw;
-
-                @include media-md {
-                    font-size: 3vw;
-                    
-                }
+                font-size: 2vw;
             }
         }
     }
+
+    .arrowcontainer {
+        display: flex;
+        align-self: center;
+        justify-content: center;
     }
 
-.projecttitle {
+    .fa-angle-down {
+        font-size: 5vw;
+        
+    }
+    }
+
     
-    padding-top: 10VW;
+
+.projecttitle {
     text-align: center;
     font-size: 3vw;
-    
 }
 
 .projectsection {
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-    padding: 3rem 3rem;
+    padding: 2vw 2vw;
     gap: 2rem;
     row-gap: 2rem;
-   
-  
 
-    @include media-lg {
+    @include media-md {
         flex-direction: row;
-        
-        
     }
-
-    
 }
 
 .project {
@@ -181,12 +177,8 @@ ul {
     border-radius: 20px;
     overflow: hidden;
 
-    
-
-    @include media-lg {
-        flex: 48%;
-       
-
+    @include media-md {
+        flex: 50%;
     }
 
     .project-name {
@@ -199,7 +191,7 @@ ul {
         flex-direction: row;
         padding: 0 4rem;
 
-        @include media-lg {
+        @include media-md {
             flex-direction: column;
             padding: 2rem 4rem 1rem 4rem;
         }
@@ -208,9 +200,8 @@ ul {
     .project-info {
         display: flex;
         flex-direction: column;
-        
 
-        @include media-lg {
+        @include media-md {
             flex-direction: row;
             padding-left: 2rem;
         }
@@ -224,7 +215,7 @@ ul {
         text-align: center;
 
 
-        @include media-lg {
+        @include media-md {
         margin-top: 2rem;
         margin-left: 2rem;
         }
@@ -236,7 +227,6 @@ ul {
             height: 200px;
             display: block;
             border-radius: 20px;
-            
         }
 
         &__live {
@@ -282,7 +272,7 @@ ul {
             padding: 1rem 0;
             text-align: center;
 
-            @include media-lg {
+            @include media-md {
                 text-align: left;
             }
         }
@@ -290,7 +280,7 @@ ul {
         &__goalstitle {
             text-align: center;
 
-            @include media-lg {
+            @include media-md {
                 text-align: left;
             }
         }
@@ -301,7 +291,7 @@ ul {
         padding-top: 1rem;
         text-align: center;
 
-        @include media-lg {
+        @include media-md {
             text-align: left;
         }
 
@@ -309,19 +299,16 @@ ul {
             padding: 1rem 0 2rem 0;
             text-align: center;
 
-            @include media-lg {
+            @include media-md {
                 text-align: left;
             }
         }
     }
-
-    
 }
 
 .footer {
     position: relative;
     padding: 0 2rem;
-    
 }
 
 
