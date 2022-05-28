@@ -173,6 +173,8 @@ ul {
 .projecttitle {
     text-align: center;
     font-size: 3vw;
+
+    
 }
 
 .projectsection {
@@ -193,22 +195,29 @@ ul {
     border-radius: 20px;
     overflow: hidden;
     width: 70%;
+    
 
-    @include media-md {
+    @include media-lg {
         flex: 50%;
+        align-items: flex-start;
     }
 
     .project-name {
         text-align: center;
         padding: 2rem 2rem;
         background-color: #06133a;
+
+        @include media-lg {
+            text-align: center;
+            align-self: center;
+        }
     }
 
     .project-container {
         flex-direction: row;
         padding: 0 4rem;
 
-        @include media-md {
+        @include media-lg {
             flex-direction: column;
             padding: 2rem 4rem 1rem 4rem;
         }
@@ -217,10 +226,14 @@ ul {
     .project-info {
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         @include media-lg {
             flex-direction: row;
-            padding-left: 2rem;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            align-items: center;
+            
         }
 
       &__container {
@@ -235,6 +248,7 @@ ul {
         @include media-lg {
         margin-top: 2rem;
         margin-left: 2rem;
+        margin-right: 0;
         }
       }
 

@@ -191,9 +191,10 @@ ul {
   width: 70%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .project {
     flex: 50%;
+    align-items: flex-start;
   }
 }
 
@@ -203,12 +204,19 @@ ul {
   background-color: #06133a;
 }
 
+@media screen and (min-width: 992px) {
+  .project .project-name {
+    text-align: center;
+    align-self: center;
+  }
+}
+
 .project .project-container {
   flex-direction: row;
   padding: 0 4rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .project .project-container {
     flex-direction: column;
     padding: 2rem 4rem 1rem 4rem;
@@ -218,12 +226,15 @@ ul {
 .project .project-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (min-width: 992px) {
   .project .project-info {
     flex-direction: row;
-    padding-left: 2rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
   }
 }
 
@@ -240,6 +251,7 @@ ul {
   .project .project-info__container {
     margin-top: 2rem;
     margin-left: 2rem;
+    margin-right: 0;
   }
 }
 
