@@ -19,4 +19,10 @@
     }
 }
 
+@mixin media-sm-landscape {
+    @media screen and (max-height: 575.98px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 @import url("https://use.typekit.net/wmo1yjc.css");

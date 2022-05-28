@@ -60,6 +60,8 @@ ul {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+
+    
     
 
     .intro-text {
@@ -83,6 +85,11 @@ ul {
                 line-height: 1.5;
             }
 
+            @include media-sm-landscape {
+                font-size: 25px;
+                line-height: 1;
+            }
+
         &__phrase {
             color: white;
         }
@@ -98,7 +105,7 @@ ul {
         text-align: center;
         display: flex;
         flex-direction: row;
-        gap: 15vw;
+        
 
         @include media-md {
             font-size: calc(50px + 9.5vw);
@@ -109,9 +116,14 @@ ul {
             font-size: calc(28px + 9.5vw);
         }
 
+        @include media-sm-landscape {
+            font-size: 50px;
+            
+        }
+
         .contact-icon {
             color:white;
-           
+            
 
             &:hover {
                 color: #071540;
@@ -121,6 +133,14 @@ ul {
                 font-size: 2vw;
             }
         }
+    }
+
+    .fa-solid {
+        width: 30vw;
+    }
+
+    .fa-brands {
+        width: 30vw;
     }
 
     .arrowcontainer {
@@ -139,6 +159,10 @@ ul {
         @include media-md {
           font-size: 5vw;
         }
+
+        @include media-sm-landscape {
+            font-size: 30px;
+        }
     }
     }
 
@@ -150,16 +174,14 @@ ul {
 }
 
 .projectsection {
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-    padding: 2vw 2vw;
-    gap: 2rem;
-    row-gap: 2rem;
+    padding: 6vw 0;
+    gap: 4rem;
+    
 
-    @include media-md {
-        flex-direction: row;
-    }
 }
 
 .project {
@@ -168,6 +190,7 @@ ul {
     background-color: #071540;
     border-radius: 20px;
     overflow: hidden;
+    width: 70%;
 
     @include media-md {
         flex: 50%;
@@ -193,7 +216,7 @@ ul {
         display: flex;
         flex-direction: column;
 
-        @include media-md {
+        @include media-lg {
             flex-direction: row;
             padding-left: 2rem;
         }
@@ -207,7 +230,7 @@ ul {
         text-align: center;
 
 
-        @include media-md {
+        @include media-lg {
         margin-top: 2rem;
         margin-left: 2rem;
         }
@@ -264,7 +287,7 @@ ul {
             padding: 1rem 0;
             text-align: center;
 
-            @include media-md {
+            @include media-lg {
                 text-align: left;
             }
         }
@@ -272,7 +295,7 @@ ul {
         &__goalstitle {
             text-align: center;
 
-            @include media-md {
+            @include media-lg {
                 text-align: left;
             }
         }
@@ -283,7 +306,7 @@ ul {
         padding-top: 1rem;
         text-align: center;
 
-        @include media-md {
+        @include media-lg {
             text-align: left;
         }
 
@@ -291,7 +314,7 @@ ul {
             padding: 1rem 0 2rem 0;
             text-align: center;
 
-            @include media-md {
+            @include media-lg {
                 text-align: left;
             }
         }
@@ -310,3 +333,4 @@ ul {
 
 
 @import "responsive";
+
