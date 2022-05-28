@@ -102,18 +102,19 @@ ul {
   text-align: center;
   display: flex;
   flex-direction: row;
+  gap: 5vw;
 }
 
 @media screen and (min-width: 768px) {
   .intro .contact {
-    font-size: calc(50px + 9.5vw);
+    font-size: calc(50px + 8.5vw);
     flex-direction: row;
   }
 }
 
 @media screen and (min-width: 992px) {
   .intro .contact {
-    font-size: calc(28px + 9.5vw);
+    font-size: calc(28px + 8.5vw);
   }
 }
 
@@ -136,11 +137,11 @@ ul {
 }
 
 .intro .fa-solid {
-  width: 30vw;
+  width: 20vw;
 }
 
 .intro .fa-brands {
-  width: 30vw;
+  width: 20vw;
 }
 
 .intro .arrowcontainer {

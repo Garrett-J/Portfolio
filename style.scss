@@ -105,15 +105,17 @@ ul {
         text-align: center;
         display: flex;
         flex-direction: row;
+        gap: 5vw;
         
 
         @include media-md {
-            font-size: calc(50px + 9.5vw);
+            font-size: calc(50px + 8.5vw);
             flex-direction: row;
         }
 
         @include media-lg {
-            font-size: calc(28px + 9.5vw);
+            font-size: calc(28px + 8.5vw);
+            
         }
 
         @include media-sm-landscape {
@@ -136,11 +138,11 @@ ul {
     }
 
     .fa-solid {
-        width: 30vw;
+        width: 20vw;
     }
 
     .fa-brands {
-        width: 30vw;
+        width: 20vw;
     }
 
     .arrowcontainer {
