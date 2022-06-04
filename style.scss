@@ -167,10 +167,12 @@ ul {
 
 
 .nav {
+    display: flex;
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #03081a;
+    justify-content: center;
 
     @include media-lg {
         position:fixed;
@@ -188,9 +190,9 @@ ul {
     .nav-icons {
         display: flex;
         flex-direction: row;
-        font-size: calc(21px + 1.5vw);
+        font-size: 30px;
         gap: 3rem;
-        justify-content: center;
+        
         height: 51px;
         align-items: center;
 
@@ -201,9 +203,11 @@ ul {
             align-content: flex-end;
             gap: 2rem;
             height: auto;
+            font-size: calc(21px + 1.5vw);
         }
 
         &__icon {
+            text-align: center;
             width:45px;
 
             @include media-lg {
