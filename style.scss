@@ -14,6 +14,11 @@ body {
     height: 100%;
     padding: 0px;
     overflow-x: hidden;
+    
+
+    @include media-lg {
+        margin: 0;
+    }
 }
 a {
     text-decoration: none;
@@ -45,13 +50,18 @@ ul {
 
 
 .intro {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 95vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+    
+
+    @include media-lg {
+       height: 100vh;
+    }
 
     .intro-text {
         max-width: 80%;
@@ -155,7 +165,61 @@ ul {
     }
     }
 
-    
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #03081a;
+
+    @include media-lg {
+        position:fixed;
+        padding-right: 30px;
+        background-color:#071540;
+        bottom: auto;
+        right: 0;
+        top: 50%;
+        left: auto;
+        transform: translateY(-50%);
+        width: auto;
+        
+    }
+
+    .nav-icons {
+        display: flex;
+        flex-direction: row;
+        font-size: calc(21px + 1.5vw);
+        gap: 3rem;
+        justify-content: center;
+        height: 51px;
+        align-items: center;
+
+        @include media-lg { 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: flex-end;
+            gap: 2rem;
+            height: auto;
+        }
+
+        &__icon {
+            width:45px;
+
+            @include media-lg {
+                width: 60px;
+                text-align:right;
+                height: 55px;
+                
+            }
+
+            &:hover {
+                color: #2CBF6C;
+                
+            }
+        }
+    }
+}
 
 .projecttitle {
     text-align: center;
@@ -171,7 +235,11 @@ ul {
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-    padding: 6vw 0 8rem 0;
+    padding: 6vw 0 0 0;
+    
+    @include media-lg {
+        padding: 6vw 0 8rem 0;
+    }
     
 
 }
@@ -179,9 +247,7 @@ ul {
 .line {
     display: block;
     width: 50vw;
-    
     margin: 4rem 0;
-    
 }
 
 
@@ -204,13 +270,12 @@ ul {
         grid-template-areas:
         'header header header right right right'
         'main main main right right right'
-        'left left left left left left'
+        'left left left right right right'
         'footer footer footer footer footer footer';
         padding: 3rem;
         border-width: 3px;
         width: 70%;
         align-items: start;
-
     }
 
     .project-name {
@@ -218,38 +283,30 @@ ul {
         font-size: calc(28px + 1vw);
         text-align: center;
         padding: 1rem;
-        
 
         @include media-lg {
+            grid-area: header;
             padding: 0;
             text-align: left;
-            grid-area: header;
         }
     }
-
     .project-info {
         flex-direction: column;
         padding: 2rem 1rem 1rem 1rem;
         display: flex;
         align-items: center;
+        text-align: center;
+        font-size: calc(20px + 0.3vw);
 
         @include media-lg {
+            display: flex;
             align-items: flex-start;
-            padding: 3rem 0 0 0;
+            padding:2rem 0;
             grid-area: main;
+            align-self:center;
+            text-align: left;
         }
 
-        &__goalstext {
-            display: flex;
-            
-            text-align: center;
-            font-size: calc(20px + 0.3vw);
-
-            @include media-lg {
-                text-align: left;
-                padding: 0;
-                
-            }
         }
 
        
@@ -268,6 +325,7 @@ ul {
             grid-area: right;
             justify-content:center;
             justify-self: end;
+            
         }
 
         &__pic {
@@ -276,6 +334,8 @@ ul {
             margin: 0 auto;
             display: block;
             border-radius: 20px;
+        border: 3px solid white;
+            
             @include media-lg {
                 width: calc(300px + .5vw);
                 height: calc(300px + .5vw);
@@ -295,8 +355,11 @@ ul {
             justify-content: flex-start;
             align-items: flex-start;
             grid-area: left;
-            padding: 3rem 0;
+            padding: 0;
             gap: 1rem;
+            align-self: flex-end;
+            flex-flow: wrap;
+            
         
         }
         
@@ -308,6 +371,23 @@ ul {
             text-align: center;
             font-size: 2rem;
             border-radius: 12px;
+            width:230px;
+            cursor: pointer;
+            @include media-lg {
+                
+                
+            }
+        }
+
+        &__wrapper {
+            gap: 1rem;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include media-lg {
+                justify-content: flex-start;
+            }
         }
 
         &__button2{
@@ -319,6 +399,7 @@ ul {
             font-size: 2rem;
             border-radius: 12px;
             cursor: pointer;
+            width: 230px;
         }
     }
 
@@ -332,7 +413,8 @@ ul {
         
 
         @include media-lg {
-            padding: 0;
+            padding:0;
+            padding-top: 6rem;
             text-align: left;
             justify-content: flex-start;
             grid-area: footer;
@@ -351,29 +433,29 @@ ul {
     }
 }
 
-    
-    }
-
-
 
 .footer {
     display: flex;
     justify-content: center;
-    padding:0 15% 8rem 15%;
+    padding:3rem 15% 0 15%;
     font-size: calc(20px + 1vw);
     align-items: center;
     flex-direction: column;
-    
+    margin-bottom: 110px;
+
     @include media-lg {
+        padding:0 15% 8rem 15%;
         font-size: calc(28px + 1vw);
+        margin: 0;
     }
 
     .footer-text {
         display: flex;
         text-align: center;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
 
         @include media-lg {
+            padding-bottom: 3rem;
         }
     }
 
@@ -394,13 +476,6 @@ ul {
             }
         }
     }
-
-     
-
-        
-    
-
-
 
 }
 

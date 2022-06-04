@@ -15,6 +15,12 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 992px) {
+  body {
+    margin: 0;
+  }
+}
+
 a {
   text-decoration: none;
   margin: 0;
@@ -42,13 +48,19 @@ ul {
 }
 
 .intro {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 95vh;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .intro {
+    height: 100vh;
+  }
 }
 
 .intro .intro-text {
@@ -160,6 +172,64 @@ ul {
   }
 }
 
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #03081a;
+}
+
+@media screen and (min-width: 992px) {
+  .nav {
+    position: fixed;
+    padding-right: 30px;
+    background-color: #071540;
+    bottom: auto;
+    right: 0;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    width: auto;
+  }
+}
+
+.nav .nav-icons {
+  display: flex;
+  flex-direction: row;
+  font-size: calc(21px + 1.5vw);
+  gap: 3rem;
+  justify-content: center;
+  height: 51px;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .nav .nav-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    gap: 2rem;
+    height: auto;
+  }
+}
+
+.nav .nav-icons__icon {
+  width: 45px;
+}
+
+@media screen and (min-width: 992px) {
+  .nav .nav-icons__icon {
+    width: 60px;
+    text-align: right;
+    height: 55px;
+  }
+}
+
+.nav .nav-icons__icon:hover {
+  color: #2CBF6C;
+}
+
 .projecttitle {
   text-align: center;
   font-size: 3vw;
@@ -172,7 +242,13 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 6vw 0 8rem 0;
+  padding: 6vw 0 0 0;
+}
+
+@media screen and (min-width: 992px) {
+  .projectsection {
+    padding: 6vw 0 8rem 0;
+  }
 }
 
 .line {
@@ -196,7 +272,7 @@ ul {
 @media screen and (min-width: 992px) {
   .project {
     display: grid;
-    grid-template-areas: 'header header header right right right' 'main main main right right right' 'left left left left left left' 'footer footer footer footer footer footer';
+    grid-template-areas: 'header header header right right right' 'main main main right right right' 'left left left right right right' 'footer footer footer footer footer footer';
     padding: 3rem;
     border-width: 3px;
     width: 70%;
@@ -213,9 +289,9 @@ ul {
 
 @media screen and (min-width: 992px) {
   .project .project-name {
+    grid-area: header;
     padding: 0;
     text-align: left;
-    grid-area: header;
   }
 }
 
@@ -224,37 +300,29 @@ ul {
   padding: 2rem 1rem 1rem 1rem;
   display: flex;
   align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  .project .project-info {
-    align-items: flex-start;
-    padding: 3rem 0 0 0;
-    grid-area: main;
-  }
-}
-
-.project .project-info__goalstext {
-  display: flex;
   text-align: center;
   font-size: calc(20px + 0.3vw);
 }
 
 @media screen and (min-width: 992px) {
-  .project .project-info__goalstext {
+  .project .project-info {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 0;
+    grid-area: main;
+    align-self: center;
     text-align: left;
-    padding: 0;
   }
 }
 
-.project .project-img {
+.project-img {
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
 }
 
 @media screen and (min-width: 992px) {
-  .project .project-img {
+  .project-img {
     flex-direction: column;
     padding: 0;
     padding-left: 2rem;
@@ -264,22 +332,23 @@ ul {
   }
 }
 
-.project .project-img__pic {
+.project-img__pic {
   width: 200px;
   height: 200px;
   margin: 0 auto;
   display: block;
   border-radius: 20px;
+  border: 3px solid white;
 }
 
 @media screen and (min-width: 992px) {
-  .project .project-img__pic {
+  .project-img__pic {
     width: calc(300px + .5vw);
     height: calc(300px + .5vw);
   }
 }
 
-.project .project-btns {
+.project-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -288,16 +357,18 @@ ul {
 }
 
 @media screen and (min-width: 992px) {
-  .project .project-btns {
+  .project-btns {
     justify-content: flex-start;
     align-items: flex-start;
     grid-area: left;
-    padding: 3rem 0;
+    padding: 0;
     gap: 1rem;
+    align-self: flex-end;
+    flex-flow: wrap;
   }
 }
 
-.project .project-btns__button {
+.project-btns__button {
   padding: 10px 30px;
   border: 1px solid #2CBF6C;
   background-color: #41bf78;
@@ -305,9 +376,24 @@ ul {
   text-align: center;
   font-size: 2rem;
   border-radius: 12px;
+  width: 230px;
+  cursor: pointer;
 }
 
-.project .project-btns__button2 {
+.project-btns__wrapper {
+  gap: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px) {
+  .project-btns__wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.project-btns__button2 {
   padding: 10px 30px;
   border: 1px solid #2CBF6C;
   background-color: #071540;
@@ -316,9 +402,10 @@ ul {
   font-size: 2rem;
   border-radius: 12px;
   cursor: pointer;
+  width: 230px;
 }
 
-.project .project-tools {
+.project-tools {
   padding: 2rem 1rem 1rem 1rem;
   text-align: center;
   display: flex;
@@ -328,15 +415,16 @@ ul {
 }
 
 @media screen and (min-width: 992px) {
-  .project .project-tools {
+  .project-tools {
     padding: 0;
+    padding-top: 6rem;
     text-align: left;
     justify-content: flex-start;
     grid-area: footer;
   }
 }
 
-.project .project-tools__tag {
+.project-tools__tag {
   display: flex;
   background-color: #6a738c;
   color: #03081a;
@@ -349,22 +437,31 @@ ul {
 .footer {
   display: flex;
   justify-content: center;
-  padding: 0 15% 8rem 15%;
+  padding: 3rem 15% 0 15%;
   font-size: calc(20px + 1vw);
   align-items: center;
   flex-direction: column;
+  margin-bottom: 110px;
 }
 
 @media screen and (min-width: 992px) {
   .footer {
+    padding: 0 15% 8rem 15%;
     font-size: calc(28px + 1vw);
+    margin: 0;
   }
 }
 
 .footer .footer-text {
   display: flex;
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .footer .footer-text {
+    padding-bottom: 3rem;
+  }
 }
 
 .footer .footer-links {
