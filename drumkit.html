@@ -10,6 +10,116 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
     <body>
-        Test
+        <section class="nav">
+            <div class="nav-icons">
+                <a class="nav-icons__icon" href="index.html"><i class="fa-solid fa-house fa-fw"></i></a>
+                <a class="nav-icons__icon" href="#footer"><i class=" fa-solid fa-envelope-open-text fa-fw"></i></a>
+                </div>
+
+        </section>
+
+    <section class="intro">
+        <h1 class="title">Drum Kit</h1>
+        <div class="preview">
+            <div class="preview-desktop">
+                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+        </div>
+        <div class="preview-mobile">
+            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+        </div>
+
+        
+    </div>
+    <div class="arrowcontainer">
+        <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
+</div>
+    
+</section>
+
+    
+<section class="main" id="main">
+    <div class="description">
+        <h2 class="description-title">Goals</h2>
+        <p class="description-text">I created the Drum Kit website in February of 2022. The aim of the project was to create a website that displayed a playable drumkit. I build the website using HTML and CSS, and used JavaScript to create the functionality I wanted out of the drumkit. It was important to me that I allow both desktop and mobile users to use the drums in whatever way they prefer, so I made sure that the buttons can be activated using either a key on the keyboard or directly clicked.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Issues Faced</h2>
+        <p class="description-text">I was testing the site when the kit suddenly wasn’t responding to my keypresses! I realized that it was due to my Caps Lock being on. Since I hadn’t added anything telling the user to disable their Caps Lock key in order for the site to work, I needed to figure out how to make everything function the same whether or not Caps Lock is on or off. My accidental use of Caps Lock showed me the importance of thorough bug testing, since you never know what might end up breaking your website.
+        </p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Solutions Found</h2>
+        <p class="description-text">Here were three changes that I ended up making to solve the problem:
+            </p>
+        <p class="description-text">I added a second case which included the capitalized letter. This allowed the audio to play if either the corresponding lowercase or uppercase key was pressed.
+        </p>
+
+        <pre><code>
+function makeSound(key) {
+    switch (key) {
+        case "W":
+        case "w":
+            var tom1 = new Audio("sounds/tom-1.mp3");
+            tom1.play();
+            break;
+            
+        case "A":
+        case "a":
+            var tom2 = new Audio("sounds/tom-2.mp3");
+            tom2.play();
+            break;
+                
+        etc...
+    </code></pre>
+        
+
+        <p class="description-text">Now that the sound plays when Caps Lock is on, I need the pressed class to be added and removed with the buttonAnimation function. To achieve this, I added another class to each HTML element which was the letter, but capitalized.</p>
+        <pre><code>
+&lt;button class="w W drum"&gt;w&lt;/button&gt;
+&lt;button class="a A drum"&gt;a&lt;/button&gt;
+&lt;button class="s S drum"&gt;s&lt;/button&gt;
+&lt;button class="d D drum"&gt;d&lt;/button&gt;
+&lt;button class="j J drum"&gt;j&lt;/button&gt;
+&lt;button class="k K drum"&gt;k&lt;/button&gt;
+&lt;button class="l L drum"&gt;l&lt;/button&gt;
+        </code></pre>
+
+        <p class="description-text"> To make the function select the element when it was pressed, I added , currentKey to “.” + currentkey. This assigned the element to the variable activeButton whether it was a capitalized or not </p>
+        <pre><code>
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey, currentKey);
+          
+    activeButton.classList.add("pressed");
+          
+    setTimeout(function () {
+        activeButton.classList.remove("pressed");
+        }, 100);
+    }
+        </code></pre>
+    </div>
+</section>
+
+
+    <div class="links">
+        <div class="links-title">
+            <h2 class="links-title__text">Check it out!</h2>
+        </div>
+        <div class="links-btn">
+            <a href="https://garrett-j.github.io/drum-kit/"><button class="links-btn__button" type="button">Live</button></a>
+            <a href="https://github.com/Garrett-J/drum-kit"><button class="links-btn__button" type="button">Code</button></a>
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="footer-text">
+            <h2>Get in touch with me!</h2>
+        </div>
+        <div class="footer-links">
+            <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
     </body>
 </html>

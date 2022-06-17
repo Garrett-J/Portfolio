@@ -9,7 +9,87 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
+
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Garrett Johnson</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
     <body>
-        Test
+        <section class="nav">
+            <div class="nav-icons">
+                <a class="nav-icons__icon" href="index.html"><i class="fa-solid fa-house fa-fw"></i></a>
+                <a class="nav-icons__icon" href="#footer"><i class=" fa-solid fa-envelope fa-fw"></i></a>
+                </div>
+
+        </section>
+
+    <section class="intro">
+        <h1 class="title">Portfolio Site</h1>
+        <div class="preview">
+            <div class="preview-desktop">
+                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+        </div>
+        <div class="preview-mobile">
+            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+        </div>
+
+        
+    </div>
+    <div class="arrowcontainer">
+        <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
+</div>
+    
+</section>
+
+    
+<section class="main" id="main">
+    <div class="description">
+        <h2 class="description-title">Goals</h2>
+        <p class="description-text">I developed my Portfolio website in June of 2022. The website was designed to direct users to my contact information, resume, and project portfolio in the simplest way possible while still demonstrating different techniques. I learned and used CSS Grid for each individual project section on the landing page, which allowed me to really tweak their layouts for all screen sizes. I used HTML to build the website, SASS to style it and used jQuery for the first time to add all of the dynamic elements. I wanted to show my ability to create something that looks good on all screen sizes and give the user all the information on myself that they need without distractions or confusing due to poor design. This made me really examine my design process (measure twice, cut once!) I also learned a lot about what works and what doesn’t when it comes to spacing and typography.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Issues Faced</h2>
+        <p class="description-text">When making the pricing boxes, I didn’t like how they were not all the same height depending on how many lines of content were in them</p>
+        <img class="description-pic" src="img/tinbird1.png" alt="">
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Solutions Found</h2>
+        <p class="description-text">I first tried making them all the same height by adding the class h-100 to each card element. This Bootstrap class sets each card to 100% of the row height. While it did make them all the same height, the Sign Up buttons were still out of line:</p>
+        <img class="description-pic" src="img/tinbird2.png" alt="">
+        <p class="description-text">I removed the class and tried just adding an extra element containing only white space before the Sign Up button for the first two cards. This resulted in all card’s being the same height, and the buttons staying at the bottom of the card.</p>
+        <img class="description-pic" src="img/tinbird3.png" alt="">
+    </div>
+</section>
+
+
+    <div class="links">
+        <div class="links-title">
+            <h2 class="links-title__text">Check it out!</h2>
+        </div>
+        <div class="links-btn">
+            <a href="http://127.0.0.1:5500/index.html#intro"><button class="links-btn__button" type="button">Live</button></a>
+            <a href="https://github.com/Garrett-J/Portfolio"><button class="links-btn__button" type="button">Code</button></a>
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="footer-text">
+            <h2>Get in touch with me!</h2>
+        </div>
+        <div class="footer-links">
+            <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
     </body>
 </html>

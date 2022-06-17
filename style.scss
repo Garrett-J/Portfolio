@@ -47,6 +47,15 @@ ul {
 
 }
 
+code {
+    font-style: oblique;
+    
+}
+
+pre {
+    overflow: scroll;
+    margin: 2rem 0;
+}
 
 
 .intro {
@@ -57,7 +66,6 @@ ul {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    
 
     @include media-lg {
        height: 100vh;
@@ -312,7 +320,6 @@ ul {
 
         }
 
-       
         }
 
     .project-img {
@@ -480,6 +487,187 @@ ul {
         }
     }
 
+}
+
+.intro {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+
+    @include media-lg {
+       height: 100vh;
+    }
+}
+
+.title {
+        
+        font-size: calc(20px + 2vw);
+        text-align: center;
+    @include media-lg {
+        padding:0 10vw;
+        text-align: center;
+        font-size: calc(28px + 3vw);
+    }
+
+    
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+   
+
+    @include media-md {
+        flex-direction: row;
+        
+        
+    }
+
+    .preview-desktop {
+
+        &__pic {
+            width: calc(8rem + 25vw);
+            height: calc(3rem + 15vw);
+
+            @include media-md {
+                height: 30vw;
+                width: 40vw;
+            }
+        }
+    }
+
+    .preview-mobile {
+
+        &__pic {
+
+            width: calc(5rem + 15vw);
+            height: calc(5rem + 15vw);
+
+            @include media-md {
+            width: 30vw;
+            height: 30vw;
+            }
+
+        }
+    }
+
+}
+
+.main {
+    padding: 3rem 10vw 0 10vw;
+
+    @include media-lg {
+        padding: 3rem 19vw;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+}
+
+.description {
+    
+
+    @include media-lg {
+        text-align: left;
+        
+    }
+
+    .description-title {
+        font-size: calc(28px + 1vw);
+        padding-bottom: 1rem;
+        padding-top: 3rem;
+        @include media-lg {
+            padding-bottom: 2rem;
+            padding-top: 5rem;
+        }
+
+    }
+
+    .description-text {
+        font-size: calc(20px + 0.3vw);
+
+        @include media-lg {
+            
+        }
+    }
+
+    .description-pic {
+        width: 75vw;
+        padding: 5rem 0;
+
+        @include media-lg {
+            width: 60vw;
+        }
+    }
+}
+
+.links {
+
+    padding-bottom: 5rem;
+    flex-direction: column;
+
+    @include media-lg {
+        padding: 3rem 19vw 12rem 19vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        
+    }
+
+    .links-title {
+        font-size: calc(20px + 1vw);
+        padding: 3rem 10vw;
+        text-align: center;
+
+        @include media-lg {
+            font-size: calc(28px + 1vw);
+            padding: 0;
+            padding-right: 2rem;
+            text-align: left;
+        }
+    }
+
+    .links-btn {
+        display: flex;
+        font-size: calc(20px + 1vw);
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        @include media-lg {
+            flex-direction: row;
+            align-items:flex-start;
+        }
+
+        &__button {
+            padding: 10px 30px;
+            border: 1px solid #2CBF6C;
+            background-color: #071540;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 230px;
+            
+            &:hover {
+                background-color: #2CBF6C;
+                color: #071540;
+            }
+        }
+        
+
+    }
 }
 
 

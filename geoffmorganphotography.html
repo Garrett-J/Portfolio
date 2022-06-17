@@ -10,6 +10,119 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
     <body>
-        Test
+        <section class="nav">
+            <div class="nav-icons">
+                <a class="nav-icons__icon" href="index.html"><i class="fa-solid fa-house fa-fw"></i></a>
+                <a class="nav-icons__icon" href="#footer"><i class=" fa-solid fa-envelope-open-text fa-fw"></i></a>
+                </div>
+
+        </section>
+
+    <section class="intro">
+        <h1 class="title">Geoff Morgan Photography</h1>
+        <div class="preview">
+            <div class="preview-desktop">
+                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+        </div>
+        <div class="preview-mobile">
+            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+        </div>
+
+        
+    </div>
+    <div class="arrowcontainer">
+        <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
+</div>
+    
+</section>
+
+    
+<section class="main" id="main">
+    <div class="description">
+        <h2 class="description-title">Goals</h2>
+        <p class="description-text">I created the website for Geoff Morgan Photography in May of 2022 working one on one with the client from start of the design process to the publishing of the website. The site is comprised of a landing page, and a portfolio page containing a responsive image gallery. The three most important things for the client were mobile responsiveness, a simple layout and being able to update content in the future. To achieve these three goals set out by the client I developed a Wordpress theme with PHP that makes use of SASS media queries in combination with flexbox layouts to achieve functional layouts on all device sizes. Custom fields were implemented in order for the client to be able to easily update all content in an easy-to-understand manner. This being my first project for a client, understanding the Wordpress interface and being able to create something that will actually by customers gave me numerous ways to further my understanding of working with a client and putting their ideas out into the real world in a way that will benefit them and their product.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Issues Faced</h2>
+        <p class="description-text">The client wanted a portfolio page that would display any assortment of images they chose all at once in a seamless fashion while adapting to any screen size without drastically changing the size of the images or adding empty space on the sides of the page.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Solutions Found</h2>
+        <p class="description-text">To create a page that hosted any images they wanted, both landscape and portrait, as well as fitting seamlessly on any screen size, I made use of the CSS grid layout. I first arranged 20 picture elements, each acting as their own row in the grid:</p>
+        <pre><code>
+&lt;div class="row"&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_1'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_2'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_3'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_4'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_5'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_6'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_7'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_8'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_9'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_10'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_11'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_14'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_12'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_13'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_15'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_16'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_17'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_18'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_19'); ?&gt;" alt=""&gt;
+    &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_20'); ?&gt;" alt=""&gt;
+&lt;/div&gt;
+        </code></pre>
+        <p class="description-text">Then to add the responsiveness, I added CSS that declared the number of columns that should appear depending on the screen size. The larger the screen size the more columns will be displayed, and therefore more pictures will be displayed side by side.</p>
+        <pre><code>
+.row {
+    line-height: 0;
+    column-count: 1;
+    column-gap: 5px;
+
+    @include media-md {
+        column-count: 2;
+    }
+
+    @include media-lg {
+      column-count: 3;
+    }
+
+    @include media-xl {
+        column-count: 4;
+    }
+
+    .row-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+}
+        </code></pre>
+    </div>
+</section>
+
+
+    <div class="links">
+        <div class="links-title">
+            <h2 class="links-title__text">Check it out!</h2>
+        </div>
+        <div class="links-btn">
+            <a href="https://geoffmorganphotography.com/"><button class="links-btn__button" type="button">Live</button></a>
+            <a href="https://github.com/Garrett-J/Geoff_Morgan_Photography"><button class="links-btn__button" type="button">Code</button></a>
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="footer-text">
+            <h2>Get in touch with me!</h2>
+        </div>
+        <div class="footer-links">
+            <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
     </body>
 </html>

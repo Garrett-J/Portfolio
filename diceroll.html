@@ -10,6 +10,75 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
     <body>
-        Test
+        <section class="nav">
+            <div class="nav-icons">
+                <a class="nav-icons__icon" href="index.html"><i class="fa-solid fa-house fa-fw"></i></a>
+                <a class="nav-icons__icon" href="#footer"><i class=" fa-solid fa-envelope-open-text fa-fw"></i></a>
+                </div>
+
+        </section>
+
+    <section class="intro">
+        <h1 class="title">Dice Roll Game</h1>
+        <div class="preview">
+            <div class="preview-desktop">
+                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+        </div>
+        <div class="preview-mobile">
+            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+        </div>
+
+        
+    </div>
+    <div class="arrowcontainer">
+        <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
+</div>
+    
+</section>
+
+    
+<section class="main" id="main">
+    <div class="description">
+        <h2 class="description-title">Goals</h2>
+        <p class="description-text">I created the Dice Game project in January of 2022. The project goals were to allow two players to customize their names, click a button to see who rolls the higher number and then be announced the winner. The goal of the website was to use Javascript I had learned to create a functioning website that used multiple functions for different purposes. The site was built using HTML and CSS, and the functionally was all created in JavaScript. Being able to create multiple functions that used user defined variables was a success.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Issues Faced</h2>
+        <p class="description-text">I needed to be able to randomly generate two different numbers between 1 and 6 and use those two numbers to change their images and declare the winner. I had the variables <code>randomNumber1</code> and <code>randomNumber2</code> that were set to change the image and text display based on their values, but I was having difficulties generating the two numbers to be random and within my range.</p>
+    </div>
+
+    <div class="description">
+        <h2 class="description-title">Solutions Found</h2>
+        <p class="description-text">I ended up learning and putting into practice the <code>Math.random()</code> function. <code>Using Math.floor()</code> before it, I was able to make sure that it only returned whole numbers. My code then looked like <code>Math.floor(Math.random() *6);</code> This wasn’t working as it was returning 0’s back, which did not have a corresponding dice face for. I needed to set a starting number, which was 1, so that it started the count at 1 and generated numbers up to 6. The final function ended up looking like this: </p>
+        <code><pre>
+function rollDice() {
+    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+    var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+}
+        </pre></code>
+    </div>
+</section>
+
+
+    <div class="links">
+        <div class="links-title">
+            <h2 class="links-title__text">Check it out!</h2>
+        </div>
+        <div class="links-btn">
+            <a href="https://garrett-j.github.io/dice-game/"><button class="links-btn__button" type="button">Live</button></a>
+            <a href="https://github.com/Garrett-J/dice-game"><button class="links-btn__button" type="button">Code</button></a>
+        </div>
+    </div>
+
+    <section class="footer" id="footer">
+        <div class="footer-text">
+            <h2>Get in touch with me!</h2>
+        </div>
+        <div class="footer-links">
+            <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
     </body>
 </html>
