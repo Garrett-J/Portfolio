@@ -41,11 +41,7 @@ $(window).on('resize' , function(){
     if($(window).width() > 992) {
         $(".nav-menu").removeClass('open');
     }
-})
-
-
-
-
+});
 
 
 

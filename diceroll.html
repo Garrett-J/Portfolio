@@ -22,10 +22,10 @@
         <h1 class="title">Dice Roll Game</h1>
         <div class="preview">
             <div class="preview-desktop">
-                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+                <img class="preview-desktop__pic" src="img/dicegame-pcdemo.png" alt="">
         </div>
         <div class="preview-mobile">
-            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+            <img class="preview-mobile__pic" src="img/dicegame-mobiledemo.png" alt="">
         </div>
 
         
@@ -39,8 +39,20 @@
     
 <section class="main" id="main">
     <div class="description">
-        <h2 class="description-title">Goals</h2>
-        <p class="description-text">I created the Dice Game project in January of 2022. The project goals were to allow two players to customize their names, click a button to see who rolls the higher number and then be announced the winner. The goal of the website was to use Javascript I had learned to create a functioning website that used multiple functions for different purposes. The site was built using HTML and CSS, and the functionally was all created in JavaScript. Being able to create multiple functions that used user defined variables was a success.</p>
+        <h2 class="description-title">When:</h2>
+        <ul class="description-text">
+            <li>January 2022</li>
+        </ul>
+        <h2 class="description-title">Goals:</h2>
+        <ul class="description-text">
+            <li>Customizable names</li>
+            <li>Custom winner's message</li>
+            <li>Display dice images that correspond with numbers generated</li>
+        </ul>
+        <h2 class="description-title">Tools Used:</h2>
+        <ul class="description-text">
+            <li>HTML5, CSS3, JavaScript, Bootstrap</li>
+        </ul>
     </div>
 
     <div class="description">
@@ -51,12 +63,10 @@
     <div class="description">
         <h2 class="description-title">Solutions Found</h2>
         <p class="description-text">I ended up learning and putting into practice the <code>Math.random()</code> function. <code>Using Math.floor()</code> before it, I was able to make sure that it only returned whole numbers. My code then looked like <code>Math.floor(Math.random() *6);</code> This wasn’t working as it was returning 0’s back, which did not have a corresponding dice face for. I needed to set a starting number, which was 1, so that it started the count at 1 and generated numbers up to 6. The final function ended up looking like this: </p>
-        <code><pre>
-function rollDice() {
+        <code><pre>function rollDice() {
     var randomNumber1 = Math.floor(Math.random() * 6) + 1;
     var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-}
-        </pre></code>
+}</pre></code>
     </div>
 </section>
 
@@ -70,6 +80,8 @@ function rollDice() {
             <a href="https://github.com/Garrett-J/dice-game"><button class="links-btn__button" type="button">Code</button></a>
         </div>
     </div>
+
+    <hr class="line"></hr>
 
     <section class="footer" id="footer">
         <div class="footer-text">

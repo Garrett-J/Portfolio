@@ -22,10 +22,10 @@
         <h1 class="title">Geoff Morgan Photography</h1>
         <div class="preview">
             <div class="preview-desktop">
-                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+                <img class="preview-desktop__pic" src="img/geoffmorganphotography-pcdemo.png" alt="">
         </div>
         <div class="preview-mobile">
-            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+            <img class="preview-mobile__pic" src="img/geoffmorganphotography-mobiledemo.png" alt="">
         </div>
 
         
@@ -39,8 +39,20 @@
     
 <section class="main" id="main">
     <div class="description">
-        <h2 class="description-title">Goals</h2>
-        <p class="description-text">I created the website for Geoff Morgan Photography in May of 2022 working one on one with the client from start of the design process to the publishing of the website. The site is comprised of a landing page, and a portfolio page containing a responsive image gallery. The three most important things for the client were mobile responsiveness, a simple layout and being able to update content in the future. To achieve these three goals set out by the client I developed a Wordpress theme with PHP that makes use of SASS media queries in combination with flexbox layouts to achieve functional layouts on all device sizes. Custom fields were implemented in order for the client to be able to easily update all content in an easy-to-understand manner. This being my first project for a client, understanding the Wordpress interface and being able to create something that will actually by customers gave me numerous ways to further my understanding of working with a client and putting their ideas out into the real world in a way that will benefit them and their product.</p>
+        <h2 class="description-title">When:</h2>
+        <ul class="description-text">
+            <li>May 2022</li>
+        </ul>
+        <h2 class="description-title">Goals:</h2>
+        <ul class="description-text">
+            <li>Easy to use landing page and portfolio gallery</li>
+            <li>Communicate and work with client throughout design and development process to understand and achieve their wants.</li>
+            <li>Use WordPress to give the client the ability to update and add content in the future.</li>
+        </ul>
+        <h2 class="description-title">Tools Used:</h2>
+        <ul class="description-text">
+            <li>HTML5, CSS3, PHP, SASS, Wordpress, jQuery, GIT</li>
+        </ul>
     </div>
 
     <div class="description">
@@ -51,8 +63,7 @@
     <div class="description">
         <h2 class="description-title">Solutions Found</h2>
         <p class="description-text">To create a page that hosted any images they wanted, both landscape and portrait, as well as fitting seamlessly on any screen size, I made use of the CSS grid layout. I first arranged 20 picture elements, each acting as their own row in the grid:</p>
-        <pre><code>
-&lt;div class="row"&gt;
+        <pre><code>&lt;div class="row"&gt;
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_1'); ?&gt;" alt=""&gt;
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_2'); ?&gt;" alt=""&gt;
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_3'); ?&gt;" alt=""&gt;
@@ -73,11 +84,9 @@
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_18'); ?&gt;" alt=""&gt;
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_19'); ?&gt;" alt=""&gt;
     &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_20'); ?&gt;" alt=""&gt;
-&lt;/div&gt;
-        </code></pre>
+&lt;/div&gt;</code></pre>
         <p class="description-text">Then to add the responsiveness, I added CSS that declared the number of columns that should appear depending on the screen size. The larger the screen size the more columns will be displayed, and therefore more pictures will be displayed side by side.</p>
-        <pre><code>
-.row {
+        <pre><code>.row {
     line-height: 0;
     column-count: 1;
     column-gap: 5px;
@@ -99,8 +108,7 @@
         height: auto;
         margin-bottom: 5px;
     }
-}
-        </code></pre>
+}</code></pre>
     </div>
 </section>
 
@@ -114,6 +122,8 @@
             <a href="https://github.com/Garrett-J/Geoff_Morgan_Photography"><button class="links-btn__button" type="button">Code</button></a>
         </div>
     </div>
+
+    <hr class="line"></hr>
 
     <section class="footer" id="footer">
         <div class="footer-text">

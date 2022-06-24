@@ -22,10 +22,10 @@
         <h1 class="title">Drum Kit</h1>
         <div class="preview">
             <div class="preview-desktop">
-                <img class="preview-desktop__pic" src="img/laptop.jpg" alt="">
+                <img class="preview-desktop__pic" src="img/drumkit-pcdemo.png" alt="">
         </div>
         <div class="preview-mobile">
-            <img class="preview-mobile__pic" src="img/phone.jpg" alt="">
+            <img class="preview-mobile__pic" src="img/drumkit-mobiledemo1.png" alt="">
         </div>
 
         
@@ -39,8 +39,19 @@
     
 <section class="main" id="main">
     <div class="description">
-        <h2 class="description-title">Goals</h2>
-        <p class="description-text">I created the Drum Kit website in February of 2022. The aim of the project was to create a website that displayed a playable drumkit. I build the website using HTML and CSS, and used JavaScript to create the functionality I wanted out of the drumkit. It was important to me that I allow both desktop and mobile users to use the drums in whatever way they prefer, so I made sure that the buttons can be activated using either a key on the keyboard or directly clicked.</p>
+        <h2 class="description-title">When:</h2>
+        <ul class="description-text">
+            <li>February 2022</li>
+        </ul>
+        <h2 class="description-title">Goals:</h2>
+        <ul class="description-text">
+            <li>Play the corresponding drum sound to the button.</li>
+            <li>Functional for both computer and mobile users.</li>
+        </ul>
+        <h2 class="description-title">Tools Used:</h2>
+        <ul class="description-text">
+            <li>HTML5, CSS3, JavaScript</li>
+        </ul>
     </div>
 
     <div class="description">
@@ -56,8 +67,7 @@
         <p class="description-text">I added a second case which included the capitalized letter. This allowed the audio to play if either the corresponding lowercase or uppercase key was pressed.
         </p>
 
-        <pre><code>
-function makeSound(key) {
+        <pre><code>function makeSound(key) {
     switch (key) {
         case "W":
         case "w":
@@ -71,24 +81,20 @@ function makeSound(key) {
             tom2.play();
             break;
                 
-        etc...
-    </code></pre>
+        etc...</code></pre>
         
 
         <p class="description-text">Now that the sound plays when Caps Lock is on, I need the pressed class to be added and removed with the buttonAnimation function. To achieve this, I added another class to each HTML element which was the letter, but capitalized.</p>
-        <pre><code>
-&lt;button class="w W drum"&gt;w&lt;/button&gt;
+        <pre><code>&lt;button class="w W drum"&gt;w&lt;/button&gt;
 &lt;button class="a A drum"&gt;a&lt;/button&gt;
 &lt;button class="s S drum"&gt;s&lt;/button&gt;
 &lt;button class="d D drum"&gt;d&lt;/button&gt;
 &lt;button class="j J drum"&gt;j&lt;/button&gt;
 &lt;button class="k K drum"&gt;k&lt;/button&gt;
-&lt;button class="l L drum"&gt;l&lt;/button&gt;
-        </code></pre>
+&lt;button class="l L drum"&gt;l&lt;/button&gt;</code></pre>
 
         <p class="description-text"> To make the function select the element when it was pressed, I added , currentKey to “.” + currentkey. This assigned the element to the variable activeButton whether it was a capitalized or not </p>
-        <pre><code>
-function buttonAnimation(currentKey) {
+        <pre><code>function buttonAnimation(currentKey) {
     var activeButton = document.querySelector("." + currentKey, currentKey);
           
     activeButton.classList.add("pressed");
@@ -96,8 +102,7 @@ function buttonAnimation(currentKey) {
     setTimeout(function () {
         activeButton.classList.remove("pressed");
         }, 100);
-    }
-        </code></pre>
+    }</code></pre>
     </div>
 </section>
 
@@ -111,6 +116,8 @@ function buttonAnimation(currentKey) {
             <a href="https://github.com/Garrett-J/drum-kit"><button class="links-btn__button" type="button">Code</button></a>
         </div>
     </div>
+
+    <hr class="line"></hr>
 
     <section class="footer" id="footer">
         <div class="footer-text">
