@@ -440,7 +440,7 @@ pre {
   margin: 2px;
   width: fit-content;
   border-radius: 3px;
-  padding: 4px;
+  padding: 4px 8px 4px 4px;
 }
 
 .footer {

@@ -84,7 +84,7 @@
         etc...</code></pre>
         
 
-        <p class="description-text">Now that the sound plays when Caps Lock is on, I need the pressed class to be added and removed with the buttonAnimation function. To achieve this, I added another class to each HTML element which was the letter, but capitalized.</p>
+        <p class="description-text">Now that the sound plays when Caps Lock is on, I need the pressed class to be added and removed with the <code>buttonAnimation</code> function. To achieve this, I added another class to each HTML element which was the letter, but capitalized.</p>
         <pre><code>&lt;button class="w W drum"&gt;w&lt;/button&gt;
 &lt;button class="a A drum"&gt;a&lt;/button&gt;
 &lt;button class="s S drum"&gt;s&lt;/button&gt;
@@ -93,7 +93,7 @@
 &lt;button class="k K drum"&gt;k&lt;/button&gt;
 &lt;button class="l L drum"&gt;l&lt;/button&gt;</code></pre>
 
-        <p class="description-text"> To make the function select the element when it was pressed, I added , currentKey to “.” + currentkey. This assigned the element to the variable activeButton whether it was a capitalized or not </p>
+        <p class="description-text"> To make the function select the element when it was pressed, I added <code>, currentKey</code> to <code>“.” + currentkey</code>. This assigned the element to the variable <code>activeButton</code> whether it was a capitalized or not </p>
         <pre><code>function buttonAnimation(currentKey) {
     var activeButton = document.querySelector("." + currentKey, currentKey);
           

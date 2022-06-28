@@ -45,9 +45,9 @@
         </ul>
         <h2 class="description-title">Goals:</h2>
         <ul class="description-text">
-            <li>Customizable names</li>
-            <li>Custom winner's message</li>
-            <li>Display dice images that correspond with numbers generated</li>
+            <li>Customizable names.</li>
+            <li>Custom winner's message.</li>
+            <li>Display dice images that correspond with numbers generated.</li>
         </ul>
         <h2 class="description-title">Tools Used:</h2>
         <ul class="description-text">
@@ -62,7 +62,7 @@
 
     <div class="description">
         <h2 class="description-title">Solutions Found</h2>
-        <p class="description-text">I ended up learning and putting into practice the <code>Math.random()</code> function. <code>Using Math.floor()</code> before it, I was able to make sure that it only returned whole numbers. My code then looked like <code>Math.floor(Math.random() *6);</code> This wasn’t working as it was returning 0’s back, which did not have a corresponding dice face for. I needed to set a starting number, which was 1, so that it started the count at 1 and generated numbers up to 6. The final function ended up looking like this: </p>
+        <p class="description-text">I ended up learning and putting into practice the <code>Math.random()</code> function. <code>Using Math.floor()</code> before it, I was able to make sure that it only returned whole numbers. My code then looked like <code>Math.floor(Math.random() *6);</code> This wasn’t working as it was returning 0’s back, which I did not have a corresponding dice face for. I needed to set a starting number, which was 1, so that it started the count at 1 and generated numbers up to 6. The final function ended up looking like this: </p>
         <code><pre>function rollDice() {
     var randomNumber1 = Math.floor(Math.random() * 6) + 1;
     var randomNumber2 = Math.floor(Math.random() * 6) + 1;
