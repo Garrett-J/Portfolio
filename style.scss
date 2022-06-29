@@ -705,7 +705,12 @@ pre {
 .resumedownload {
     text-decoration: underline;
     font-size: 2rem;
-    line-height: 5rem;
+    line-height: 3rem;
+
+    @include media-lg {
+        line-height: 5rem;
+    }
+    
 }
 
 .sectiontitle {
