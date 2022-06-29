@@ -54,9 +54,15 @@ code {
 pre {
   overflow: auto;
   margin: 3rem 0 4rem 0;
-  font-size: calc(20px + 0.2vw);
+  font-size: 16px;
   background-color: #03081a;
   padding: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  pre {
+    font-size: calc(20px + 0.2vw);
+  }
 }
 
 .intro {
@@ -536,7 +542,7 @@ pre {
 }
 
 .preview .preview-desktop__pic {
-  width: calc(25rem + 1vw);
+  width: 80%;
   height: auto;
   box-shadow: 15px 20px #061133;
 }
