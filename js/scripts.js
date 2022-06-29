@@ -28,7 +28,7 @@ $(function () {
         $('.intro-text__word').fadeOut(500, function () {
             $(this).text(phraseArray[count % phraseArray.length]).fadeIn(500);
         });
-    }, 5000);
+    }, 3000);
 });
 
 
