@@ -395,6 +395,10 @@ pre {
   cursor: pointer;
 }
 
+.project-btns__button:hover {
+  box-shadow: -3px 5px #166036;
+}
+
 .project-btns__wrapper {
   gap: 1rem;
   justify-content: center;
@@ -420,6 +424,11 @@ pre {
   width: 230px;
 }
 
+.project-btns__button2:hover {
+  background-color: #2CBF6C;
+  color: #071540;
+}
+
 .project-tools {
   padding: 2rem 1rem 1rem 1rem;
   text-align: center;
@@ -441,7 +450,7 @@ pre {
 
 .project-tools__tag {
   display: flex;
-  background-color: #6a738c;
+  background-color: #798198;
   color: #03081a;
   margin: 2px;
   width: fit-content;
