@@ -1,55 +1,33 @@
 @import "variables";
 
-
-html {
-    scroll-behavior: smooth;
-}
-body {
+a {
+    color: inherit;
     margin: 0;
-    height:auto;
-    font-family: "lato", sans-serif;
+    text-decoration: none;
+}
+
+body {
     background-color: #071540;
     color: white;
-    width: 100%;
+    font-family: "lato", sans-serif;
     height: 100%;
-    padding: 0px;
+    margin: 0;
+    height:auto;
     overflow-x: hidden;
-    
-
-    @include media-lg {
-        margin: 0;
-    }
-}
-a {
-    text-decoration: none;
-    margin: 0;
-    color: inherit;
-}
-
-h1 {
-    margin: 0;
-}
-
-h2 {
-    margin: 0;
-}
-
-h3 {
-    margin: 0;
-}
-
-p {
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-
+    padding: 0px;
+    width: 100%;
 }
 
 code {
     font-style: oblique;
-   
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 pre {
@@ -64,37 +42,35 @@ pre {
     }
 }
 
-
 .intro {
-    width: 100%;
-    height: 95vh;
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
+    height: 95vh;
     justify-content: space-evenly;
     text-align: center;
+    width: 100%;
 
     @include media-lg {
        height: 100vh;
     }
 
     .intro-text {
-        max-width: 80%;
         display: flex;
         font-size: calc(21px + 1.5vw);
         line-height: 1.5;
+        max-width: 80%;
 
             @include media-md {
-                max-width: 80%;
                 font-size: calc(28px + 1.5vw);
                 line-height: 1.5;
-
+                max-width: 80%;
             }
             
             @include media-lg {
-                max-width: 80%;
                 font-size: calc(28px + 1.5vw);
                 line-height: 1.5;
+                max-width: 80%;
             }
 
             @include media-sm-landscape {
@@ -112,32 +88,27 @@ pre {
     }
 
     .contact {
-        
-        font-size: calc(50px + 6.5vw);
-        text-align: center;
         display: flex;
         flex-direction: row;
+        font-size: calc(50px + 6.5vw);
         gap: 5vw;
-        
+        text-align: center;
 
         @include media-md {
-            font-size: calc(50px + 8.5vw);
             flex-direction: row;
+            font-size: calc(50px + 8.5vw);
         }
 
         @include media-lg {
             font-size: calc(28px + 8.5vw);
-            
         }
 
         @include media-sm-landscape {
             font-size: 50px;
-            
         }
 
         .contact-icon {
             color:white;
-            
 
             &:hover {
                 color: #2CBF6C;
@@ -149,22 +120,16 @@ pre {
         }
     }
 
-    .fa-solid {
-        width: 20vw;
-    }
-
-    .fa-brands {
+    .fa-solid, .fa-brands {
         width: 20vw;
     }
 
     .arrowcontainer {
         display: flex;
-        
     }
 
     .fa-angle-down {
         font-size: 15vw;
-        
 
         &:hover {
             color: #2CBF6C;
@@ -178,47 +143,44 @@ pre {
             font-size: 30px;
         }
     }
-    }
-
+}
 
 .nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #03081a;
+    bottom: 0;
+    display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
 
     @include media-lg {
-        position:fixed;
-        padding-right: 30px;
         background-color:#071540;
         bottom: auto;
+        left: auto;
+        position:fixed;
+        padding-right: 30px;
         right: 0;
         top: 50%;
-        left: auto;
         transform: translateY(-50%);
         width: auto;
-        
     }
 
     .nav-icons {
+        align-items: center;
         display: flex;
         flex-direction: row;
         font-size: 30px;
         gap: 3rem;
-        
         height: 51px;
-        align-items: center;
 
         @include media-lg { 
+            align-content: flex-end;
             display: flex;
             flex-direction: column;
+            font-size: calc(21px + 1.5vw);
             justify-content: flex-end;
-            align-content: flex-end;
             gap: 2rem;
             height: auto;
-            font-size: calc(21px + 1.5vw);
         }
 
         &__icon {
@@ -226,30 +188,26 @@ pre {
             width:45px;
 
             @include media-lg {
-                width: 60px;
-                text-align:right;
                 height: 55px;
+                text-align:right;
+                width: 60px;
             }
 
             &:hover {
                 color: #2CBF6C;
-                
             }
         }
     }
 }
 
 .projecttitle {
-    text-align: center;
-    font-size: 3vw;
     font-size: calc(28px + 3vw);
-
-    
+    text-align: center;
 }
 
 .projectsection {
-    align-items: center;
     align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
@@ -258,27 +216,22 @@ pre {
     @include media-lg {
         padding: 6vw 0 8rem 0;
     }
-    
-
 }
 
-
-
-
-
-
 .project {
+    align-items: center;
+    border-color: #2CBF6C;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
     overflow: hidden;
     width: 95%;
-    border-color: #2CBF6C;
-    border-width: 1px;
-    border-style: solid;
-    align-items: center;
 
     @include media-lg {
+        align-items: start;
+        border-width: 3px;
         display: grid;
         grid-template-areas:
         'header header header right right right'
@@ -286,16 +239,14 @@ pre {
         'left left left right right right'
         'footer footer footer footer footer footer';
         padding: 3rem;
-        border-width: 3px;
         width: 70%;
-        align-items: start;
     }
 
     .project-name {
         display: flex;
         font-size: calc(28px + 1vw);
-        text-align: center;
         padding: 1rem;
+        text-align: center;
 
         @include media-lg {
             grid-area: header;
@@ -303,114 +254,108 @@ pre {
             text-align: left;
         }
     }
+
     .project-info {
-        flex-direction: column;
-        padding: 2rem 1rem 1rem 1rem;
-        display: flex;
         align-items: center;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
         font-size: calc(20px + 0.3vw);
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center;
 
         @include media-lg {
-            display: flex;
             align-items: flex-start;
-            padding:2rem 0;
-            grid-area: main;
             align-self:center;
+            display: flex;
+            grid-area: main;
+            padding:2rem 0;
             text-align: left;
         }
-
-        }
-
-        }
+    }
+}
 
     .project-img {
         display: flex;
         flex-direction: column;
         padding: 2rem 0;
-        
 
         @include media-lg {
             flex-direction: column;
-            padding: 0;
-            padding-left: 2rem;
             grid-area: right;
             justify-content:center;
             justify-self: end;
-            
+            padding: 0;
+            padding-left: 2rem;
         }
 
         &__pic {
-            width: 200px;
+            border: 3px solid white;
+            border-radius: 20px;
+            display: block;
             height: 200px;
             margin: 0 auto;
-            display: block;
-            border-radius: 20px;
-        border: 3px solid white;
-            
+            width: 200px;
+
             @include media-lg {
-                width: calc(300px + .5vw);
                 height: calc(300px + .5vw);
+                width: calc(300px + .5vw);
             }
-            
         }
     }
 
     .project-btns {
         display: flex;
         flex-wrap: wrap;
+        gap: 1rem;
         justify-content: center;
         padding: 1rem 1rem 0 1rem;
-        gap: 1rem;
 
         @include media-lg {
-            justify-content: flex-start;
             align-items: flex-start;
-            grid-area: left;
-            padding: 0;
-            gap: 1rem;
             align-self: flex-end;
             flex-flow: wrap;
-            
-        
+            gap: 1rem;
+            grid-area: left;
+            justify-content: flex-start;
+            padding: 0;
         }
-        
+
         &__button{
-            padding: 10px 30px;
-            border: 1px solid #2CBF6C;
             background-color: rgb(65, 191, 120);
-            color: rgb(7, 21, 64);
-            text-align: center;
-            font-size: 2rem;
+            border: 1px solid #2CBF6C;
             border-radius: 12px;
-            width:230px;
+            color: rgb(7, 21, 64);
             cursor: pointer;
-            
+            padding: 10px 30px;
+            font-size: 2rem;
+            text-align: center;
+            width:230px;
+
             &:hover {
                 box-shadow: -3px 5px #166036;
             }
         }
 
         &__wrapper {
-            gap: 1rem;
-            justify-content: center;
             display: flex;
             flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
 
             @include media-lg {
                 justify-content: flex-start;
             }
         }
 
-        &__button2{
-            padding: 10px 30px;
-            border: 1px solid #2CBF6C;
+        &__button2 {
             background-color: #071540;
-            color: white;
-            text-align: center;
-            font-size: 2rem;
+            border: 1px solid #2CBF6C;
             border-radius: 12px;
+            color: white;
             cursor: pointer;
+            font-size: 2rem;
+            padding: 10px 30px;
+            text-align: center;
             width: 230px;
 
             &:hover {
@@ -421,55 +366,51 @@ pre {
     }
 
     .project-tools {
-        padding: 2rem 1rem 1rem 1rem;
-        text-align: center;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center;
 
         @include media-lg {
+            grid-area: footer;
+            justify-content: flex-start;
             padding:0;
             padding-top: 6rem;
             text-align: left;
-            justify-content: flex-start;
-            grid-area: footer;
         }
-    
 
     &__tag {
-        display: flex;
         background-color: #798198;
-        color: #03081a;
-        margin: 2px;
-        width: fit-content;
         border-radius: 3px;
+        color: #03081a;
+        display: flex;
+        margin: 2px;
         padding: 4px 8px 4px 4px;
-        
+        width: fit-content;
     }
 }
 
-
 .footer {
-    display: flex;
-    justify-content: center;
-    padding:3rem 15% 0 15%;
-    font-size: calc(20px + 1vw);
     align-items: center;
+    display: flex;
     flex-direction: column;
+    font-size: calc(20px + 1vw);
+    justify-content: center;
     margin-bottom: 110px;
+    padding:3rem 15% 0 15%;
 
     @include media-lg {
-        padding:0 15% 8rem 15%;
-        font-size: calc(28px + 1vw);
         margin: 0;
+        font-size: calc(28px + 1vw);
+        padding:0 15% 8rem 15%;
     }
 
     .footer-text {
         display: flex;
-        text-align: center;
         padding-bottom: 2rem;
+        text-align: center;
 
         @include media-lg {
             padding-bottom: 3rem;
@@ -478,8 +419,8 @@ pre {
 
     .footer-links {
         font-size: calc(28px + 2vw);
-        width: 100%;
         text-align: center;
+        width: 100%;
         word-spacing: 5rem;
 
         @include media-lg {
@@ -487,24 +428,21 @@ pre {
         }
 
         &__icon {
-
             &:hover {
                 color:#2CBF6C;
             }
         }
     }
-
 }
 
 .intro {
-    width: 100%;
-    height: 95vh;
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
+    height: 95vh;
     justify-content: space-evenly;
     text-align: center;
-    
+    width: 100%;
 
     @include media-lg {
        height: 100vh;
@@ -512,105 +450,92 @@ pre {
 }
 
 .title {
-        
-        font-size: calc(20px + 2vw);
-        text-align: center;
-        
+    font-size: calc(20px + 2vw);
+    text-align: center;
+
     @include media-lg {
+        font-size: calc(28px + 3vw);
         padding:0 10vw;
         text-align: center;
-        font-size: calc(28px + 3vw);
     }
-
-    
 }
 
 .preview {
+    align-items: center;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
     gap: 3vh;
-    
-    
+    justify-content: center;
 
     @include media-lg {
-        flex-direction: row;
         align-items: flex-end;
+        flex-direction: row;
         width: 80vw;
     }
 
     .preview-desktop {
-
         &__pic {
-            width: 80%;
-            height: auto;
             box-shadow: 15px 20px #061133;
+            height: auto;
+            width: 80%;
 
             @include media-lg {
-               width: calc(35rem + 2.3vw);
-               height: auto;
+                height: auto;
+                width: calc(35rem + 2.3vw);
             }
         }
     }
 
     .preview-mobile {
-
         &__pic {
+            box-shadow: 15px 20px #061133;
             height: auto;
             width: calc(8rem + 0.5vw);
-            box-shadow: 15px 20px #061133;
 
             @include media-lg {
+                height: auto;
                 width: calc(10rem + 0.8vw);
-                height: auto
             }
-
         }
     }
-
 }
 
 .main {
     padding: 3rem 10vw 0 10vw;
 
     @include media-lg {
-        padding: 3rem 19vw;
         display: flex;
         flex-direction: column;
-        
+        padding: 3rem 19vw;
     }
-
 }
 
 .description {
-    
-
     @include media-lg {
         text-align: left;
-        
     }
 
     .description-title {
         font-size: calc(28px + 1vw);
         padding: 2rem 0;
+
         @include media-lg {
             padding: 3rem 0;
         }
-
     }
 
     .description-text {
         font-size: calc(20px + 0.3vw);
         padding-bottom: 1rem;
+
         @include media-lg {
             padding-bottom: 2rem;
         }
     }
 
     .description-pic {
-        width: 75vw;
         padding: 5rem 0;
+        width: 75vw;
 
         @include media-lg {
             width: 60vw;
@@ -619,15 +544,14 @@ pre {
 }
 
 .links {
-    padding-bottom: 5rem;
     flex-direction: column;
+    padding-bottom: 5rem;
 
     @include media-lg {
-        padding: 3rem 19vw;
-        display: flex;
         align-items: center;
+        display: flex;
+        padding: 3rem 19vw;
         text-align: left;
-        
     }
 
     .links-title {
@@ -642,11 +566,11 @@ pre {
     }
 
     .links-btn {
-        display: flex;
-        font-size: calc(20px + 1vw);
-        flex-direction: column;
-        gap: 2rem;
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: calc(20px + 1vw);
+        gap: 2rem;
 
         @include media-lg {
             flex-direction: row;
@@ -654,40 +578,37 @@ pre {
         }
 
         &__button {
-            padding: 10px 30px;
-            border: 1px solid #2CBF6C;
             background-color: #071540;
-            color: white;
-            text-align: center;
-            font-size: 3rem;
+            border: 1px solid #2CBF6C;
             border-radius: 12px;
+            color: white;
             cursor: pointer;
+            font-size: 3rem;
+            padding: 10px 30px;
+            text-align: center;
             width: 200px;
-            
+
             &:hover {
                 background-color: #2CBF6C;
                 color: #071540;
             }
         }
-        
-
     }
 }
 
 .line {
-    height: 1px;
-    border: none;
     background-color: #2CBF6C;
-    width: 80vw;
+    border: none;
     color: #2CBF6C;
-        margin-top: 1rem;
-        margin-bottom: 3rem;
+    height: 1px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    width: 80vw;
+
     @include media-lg {
-
-        width: 40vw;
-        margin-top: 3rem;
         margin-bottom: 5rem;
-
+        margin-top: 3rem;
+        width: 40vw;
     }
 }
 
@@ -696,26 +617,23 @@ pre {
 }
 
 // Resume Styling
-
-
-
 .resumebody {
-    padding: 2rem 2rem 4rem 2rem;
     line-height: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
+    
     @include media-lg {
-        padding:2rem 6rem;
+        padding: 2rem 6rem;
     }
 }
 
 .resumedownload {
-    text-decoration: underline;
     font-size: 2rem;
     line-height: 3rem;
+    text-decoration: underline;
 
     @include media-lg {
         line-height: 5rem;
     }
-    
 }
 
 .sectiontitle {
@@ -729,5 +647,3 @@ pre {
 .resumeitem {
     padding-top: 2rem;
 }
-@import "responsive";
-

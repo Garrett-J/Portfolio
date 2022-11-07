@@ -1,7 +1,4 @@
-
 $(document).ready(function() {
-
-
 // Display corresponding contact info on click
 $(".contact-logo__img1").click(function() {
     $(".contact-box__text2").removeClass('open');
@@ -18,7 +15,6 @@ $(".contact-logo__img3").click(function() {
     $(".contact-box__text2").removeClass('open');
     $(".contact-box__text3").toggleClass('open');}
 );
-
 // Rotate intro text
 $(function () {
     count= 0;
@@ -30,31 +26,14 @@ $(function () {
         });
     }, 3000);
 });
-
-
+//Opens/Closes mobile menu
 $(".menu-btn").click(function() {
     $(".nav-menu").toggleClass('open')
 });
-
-
+//Sets menu to closed if screen size is resized to desktop
 $(window).on('resize' , function(){
     if($(window).width() > 992) {
         $(".nav-menu").removeClass('open');
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

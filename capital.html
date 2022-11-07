@@ -6,34 +6,35 @@
         <title>Garrett Johnson</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS Stylesheet -->
         <link rel="stylesheet" href="style.css">
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    </head>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
     <body>
         <section class="nav">
             <div class="nav-icons">
                 <a class="nav-icons__icon" href="/"><i class="fa-solid fa-house fa-fw"></i></a>
                 <a class="nav-icons__icon" href="#footer"><i class=" fa-solid fa-envelope fa-fw"></i></a>
-                </div>
-
+            </div>
         </section>
 
-    <section class="intro">
-        <h1 class="title">Capital Restaurant</h1>
-        <div class="preview">
-            <div class="preview-desktop">
-                <img class="preview-desktop__pic" src="img/capitalpcdemo.png" alt="">
-        </div>
-        <div class="preview-mobile">
-            <img class="preview-mobile__pic" src="img/capital-mobiledemo.png" alt="">
-        </div>
-
-        
-    </div>
-    <div class="arrowcontainer">
-        <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
-    </div>
-    </section>
+        <section class="intro">
+            <h1 class="title">Capital Restaurant</h1>
+            <div class="preview">
+                <div class="preview-desktop">
+                    <img class="preview-desktop__pic" src="img/capitalpcdemo.png" alt="Desktop preview of Capital Restaurant website">
+                </div>
+                <div class="preview-mobile">
+                    <img class="preview-mobile__pic" src="img/capital-mobiledemo.png" alt="Mobile preview of Capital Restaurant website">
+                </div>
+            </div>
+            <div class="arrowcontainer">
+                <a href="#main"><i class="fa-solid fa-angle-down"></i></a>
+            </div>
+        </section>
 
         <section class="main" id="main">
             <div class="description">
@@ -47,16 +48,14 @@
                     <li>Redesign current website to improve accessibility.</li>
                 </ul>
                 <h2 class="description-title">Tools Used:</h2>
-        <ul class="description-text">
-            <li>HTML5, CSS3, JavaScript, jQuery, GIT</li>
-        </ul>
+                <ul class="description-text">
+                    <li>HTML5, CSS3, JavaScript, jQuery, GIT</li>
+                </ul>
             </div>
-        
             <div class="description">
                 <h2 class="description-title">Issues Faced</h2>
                 <p class="description-text">I wanted to break the menu page up into sections since the menu is so large that displaying it all on one page was a lot to navigate for a user, especially on a mobile device. To achieve this, I needed to create a series of responsive buttons that would let the user access one section at a time.</p>
             </div>
-        
             <div class="description">
                 <h2 class="description-title">Solutions Found</h2>
                 <p class="description-text">To create the responsive buttons, I used the CSS <code>display: flex;</code> and <code>flex-flow: row wrap</code>. This allowed the buttons to be completly responsive.</p>
@@ -64,31 +63,25 @@
             </div>
         </section>
 
-
-    
-
-    <div class="links">
-        <div class="links-title">
-            <h2 class="links-title__text">Check it out!</h2>
+        <div class="links">
+            <div class="links-title">
+                <h2 class="links-title__text">Check it out!</h2>
+            </div>
+            <div class="links-btn">
+                <a href="https://garrett-j.github.io/Restaurant-Redesign/"><button class="links-btn__button" type="button">Live</button></a>
+                <a href="https://github.com/Garrett-J/Restaurant-Redesign"><button class="links-btn__button" type="button">Code</button></a>
+            </div>
         </div>
-        <div class="links-btn">
-            <a href="https://garrett-j.github.io/Restaurant-Redesign/"><button class="links-btn__button" type="button">Live</button></a>
-            <a href="https://github.com/Garrett-J/Restaurant-Redesign"><button class="links-btn__button" type="button">Code</button></a>
-        </div>
-    </div>
+        <hr class="line"></hr>
 
-    <hr class="line"></hr>
-
-    <section class="footer" id="footer">
-        <div class="footer-text">
-            <h2>Get in touch with me!</h2>
-        </div>
-        <div class="footer-links">
-            <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
-        </div>
-    </section>
-</section>
-
+        <section class="footer" id="footer">
+            <div class="footer-text">
+                <h2>Get in touch with me!</h2>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
     </body>
 </html>
