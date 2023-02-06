@@ -524,28 +524,30 @@ pre {
 }
 
 .preview .preview-desktop__pic {
-  box-shadow: 15px 20px #061133;
   height: auto;
-  width: 80%;
+  width: 25vw;
+  min-width: 26rem;
 }
 
 @media screen and (min-width: 992px) {
   .preview .preview-desktop__pic {
     height: auto;
-    width: calc(35rem + 2.3vw);
+    width: 40vw;
+    min-width: 31rem;
   }
 }
 
 .preview .preview-mobile__pic {
-  box-shadow: 15px 20px #061133;
   height: auto;
-  width: calc(8rem + 0.5vw);
+  width: 20vw;
+  min-width: 8rem;
 }
 
 @media screen and (min-width: 992px) {
   .preview .preview-mobile__pic {
     height: auto;
-    width: calc(10rem + 0.8vw);
+    width: 13vw;
+    min-width: 10rem;
   }
 }
 
