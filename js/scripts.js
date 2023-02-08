@@ -1,20 +1,5 @@
 $(document).ready(function() {
-// Display corresponding contact info on click
-$(".contact-logo__img1").click(function() {
-    $(".contact-box__text2").removeClass('open');
-    $(".contact-box__text3").removeClass('open');
-    $(".contact-box__text1").toggleClass('open');}
-);
-$(".contact-logo__img2").click(function() {
-    $(".contact-box__text1").removeClass('open');
-    $(".contact-box__text3").removeClass('open');
-    $(".contact-box__text2").toggleClass('open');}
-);
-$(".contact-logo__img3").click(function() {
-    $(".contact-box__text1").removeClass('open');
-    $(".contact-box__text2").removeClass('open');
-    $(".contact-box__text3").toggleClass('open');}
-);
+
 // Rotate intro text
 $(function () {
     count= 0;
@@ -26,14 +11,22 @@ $(function () {
         });
     }, 3000);
 });
-//Opens/Closes mobile menu
-$(".menu-btn").click(function() {
-    $(".nav-menu").toggleClass('open')
+
+var mobileText = "Mobile";
+var desktopText = "Desktop";
+$(".preview-desktop").hide();
+$("label.switch input[type=checkbox]").change(function() {
+    $(".previewtext").text(this.checked?mobileText:desktopText);
+    
+    if($(this).is(":checked")) {
+        $(".preview-mobile").show();
+        $(".preview-desktop").hide();
+    } else {
+        $(".preview-mobile").hide();
+        $(".preview-desktop").show();
+    };
+
+    });
 });
-//Sets menu to closed if screen size is resized to desktop
-$(window).on('resize' , function(){
-    if($(window).width() > 992) {
-        $(".nav-menu").removeClass('open');
-    }
-});
-});
+
+
