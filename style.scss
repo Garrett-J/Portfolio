@@ -447,7 +447,7 @@ pre {
     display: flex;
     flex-flow: column;
     height: 95vh;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
     width: 100%;
 
@@ -461,7 +461,7 @@ pre {
     text-align: center;
 
     @include media-lg {
-        font-size: calc(28px + 3vw);
+        font-size: 3rem;
         padding:0 10vw;
         text-align: center;
         
@@ -485,13 +485,15 @@ pre {
         &__pic {
             // box-shadow: 15px 20px #061133;
             height: auto;
-            width: 26vw;
-            min-width: 26rem;
+            width: 23rem;
            
+            @include media-md {
+            width: 38rem;
+            }
 
             @include media-lg {
                 height: auto;
-                width: 50.5rem;
+                width: 50.4rem;
             }
         }
     }
@@ -500,12 +502,15 @@ pre {
         &__pic {
             // box-shadow: 15px 20px #061133;
             height: auto;
-            width: 20vw;
-            min-width: 8.8rem;
+            width: 7.6rem;
+
+            @include media-md {
+                width: 13rem;
+                }
 
             @include media-lg {
                 height: auto;
-                width: 17rem;
+                width: 16.9rem;
             }
         }
     }
