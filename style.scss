@@ -1,5 +1,7 @@
 @import "variables";
 
+// ELEMENTS //
+
 a {
     color: inherit;
     margin: 0;
@@ -484,15 +486,16 @@ pre {
     .preview-desktop {
         &__pic {
             // box-shadow: 15px 20px #061133;
-            height: auto;
+            height: 224px;
             width: 23rem;
            
             @include media-md {
+            height: 380px;
             width: 38rem;
             }
 
             @include media-lg {
-                height: auto;
+                height: 498px;
                 width: 50.4rem;
             }
         }
@@ -501,15 +504,16 @@ pre {
     .preview-mobile {
         &__pic {
             // box-shadow: 15px 20px #061133;
-            height: auto;
+            height: 224px;
             width: 7.6rem;
 
             @include media-md {
+                height: 380px;
                 width: 13rem;
                 }
 
             @include media-lg {
-                height: auto;
+                height: 498px;
                 width: 16.9rem;
             }
         }
@@ -517,12 +521,14 @@ pre {
 }
 
 .main {
-    padding: 3rem 10vw 0 10vw;
+   
+    padding: 5rem 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include media-lg {
-        display: flex;
-        flex-direction: column;
-        padding: 3rem 19vw;
+        padding: 5rem 19vw;
     }
 }
 
@@ -552,25 +558,17 @@ pre {
             margin-bottom: 20px;
         }
     }
-
-    .description-pic {
-        padding: 5rem 0;
-        width: 75vw;
-
-        @include media-lg {
-            width: 60vw;
-        }
-    }
 }
 
 .links {
     flex-direction: column;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 
     @include media-lg {
         align-items: center;
         display: flex;
-        padding: 3rem 19vw;
+        padding: 0rem 19vw;
         text-align: left;
     }
 
@@ -621,13 +619,12 @@ pre {
     border: none;
     color: #2CBF6C;
     height: 1px;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-    width: 80vw;
+    
+    width: 50vw;
 
     @include media-lg {
         margin-bottom: 5rem;
-        margin-top: 3rem;
+        margin-top: 5rem;
         width: 40vw;
     }
 }

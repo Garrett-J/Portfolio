@@ -531,50 +531,53 @@ pre {
 }
 
 .preview .preview-desktop__pic {
-  height: auto;
+  height: 224px;
   width: 23rem;
 }
 
 @media screen and (min-width: 768px) {
   .preview .preview-desktop__pic {
+    height: 380px;
     width: 38rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .preview .preview-desktop__pic {
-    height: auto;
+    height: 498px;
     width: 50.4rem;
   }
 }
 
 .preview .preview-mobile__pic {
-  height: auto;
+  height: 224px;
   width: 7.6rem;
 }
 
 @media screen and (min-width: 768px) {
   .preview .preview-mobile__pic {
+    height: 380px;
     width: 13rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .preview .preview-mobile__pic {
-    height: auto;
+    height: 498px;
     width: 16.9rem;
   }
 }
 
 .main {
-  padding: 3rem 10vw 0 10vw;
+  padding: 5rem 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media screen and (min-width: 992px) {
   .main {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 19vw;
+    padding: 5rem 19vw;
   }
 }
 
@@ -610,19 +613,9 @@ pre {
   margin-bottom: 20px;
 }
 
-.description .description-pic {
-  padding: 5rem 0;
-  width: 75vw;
-}
-
-@media screen and (min-width: 992px) {
-  .description .description-pic {
-    width: 60vw;
-  }
-}
-
 .links {
   flex-direction: column;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
@@ -630,7 +623,7 @@ pre {
   .links {
     align-items: center;
     display: flex;
-    padding: 3rem 19vw;
+    padding: 0rem 19vw;
     text-align: left;
   }
 }
@@ -685,15 +678,13 @@ pre {
   border: none;
   color: #2CBF6C;
   height: 1px;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  width: 80vw;
+  width: 50vw;
 }
 
 @media screen and (min-width: 992px) {
   .line {
     margin-bottom: 5rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
     width: 40vw;
   }
 }

@@ -50,84 +50,33 @@
 
         <section class="main" id="main">
             <div class="description">
-                <!-- <h2 class="description-title">When:</h2>
-                <ul class="description-text">
-                    <li>June 2022</li>
-                </ul>
-                <h2 class="description-title">Goals:</h2> -->
                 <ul class="description-text">
                     <li>Share contact info, resume, and portfolio.</li>
                     <li>Minimalistic & responsive design.</li>
                 </ul>
-                <!-- <h2 class="description-title">Tools Used:</h2>
-                <ul class="description-text">
-                    <li>HTML5, CSS3, SASS, jQuery, JavaScript, GIT</li>
-                </ul> -->
             </div>
-            <!-- <div class="description">
-                <h2 class="description-title">Issues Faced</h2>
-                <p class="description-text">When creating the containers on the landing page that contain each project’s name, description, information and links, I wanted them to be fully responsive and also use the space well on mobile and desktop. I first styled the containers as flex containers for mobile. Using the column-oriented layout, I was able to position things exactly how I wanted them. When trying to turn this flex-container into a desktop-oriented layout, I ran into issues with being able to control things exactly how I wanted them without re-writing my HTML and in turn, ruining my mobile styling.</p>
+            <div class="links">
+                <div class="links-title">
+                    <h2 class="links-title__text">Check it out!</h2>
+                </div>
+                <div class="links-btn">
+                    <a href="https://geoffmorganphotography.com/"><button class="links-btn__button" type="button">Live</button></a>
+                </div>
             </div>
-            <div class="description">
-                <h2 class="description-title">Solutions Found</h2>
-                <p class="description-text">I decided to turn the flex container on mobile screens into a grid container for larger screens. I gave each part in the container a grid-area, and then used grid-template-areas to arrange them. This let me define what I wanted where, in terms of columns and rows. All that I had to do after was adjust the padding on each element individually to get the exact positioning that I wanted.</p>
-                <pre><code>
-                    grid-template-areas:
-                        'header header header right right right'
-                        'main main main right right right'
-                        'left left left right right right'
-                        'footer footer footer footer footer footer';
-                </code></pre>
-                <p class="description-text">Using a SASS mixin, my separate stylings for the containers ended up looking like this:</p>
-                <pre><code>
-                    .project {
-                        display: flex;
-                        flex-direction: column;
-                        border-radius: 20px;
-                        overflow: hidden;
-                        width: 95%;
-                        border-color: #2CBF6C;
-                        border-width: 1px;
-                        border-style: solid;
-                        align-items: center;
-                            
-                        @include media-lg {
-                            display: grid;
-                            grid-template-areas:
-                            'header header header right right right'
-                            'main main main right right right'
-                            'left left left right right right'
-                            'footer footer footer footer footer footer';
-                            padding: 3rem;
-                            border-width: 3px;
-                            width: 70%;
-                            align-items: start;
-                        }
-                    }
-                </code></pre>
-            </div> -->
-        </section>
-
-        <div class="links">
-            <div class="links-title">
-                <h2 class="links-title__text">Check it out!</h2>
-            </div>
-            <div class="links-btn">
-                <a href="https://geoffmorganphotography.com/"><button class="links-btn__button" type="button">Live</button></a>
-                <!-- <a href="https://github.com/Garrett-J/Geoff_Morgan_Photography"><button class="links-btn__button" type="button">Code</button></a> -->
-            </div>
-        </div>
-        <hr class="line"></hr>
-
-        <section class="footer" id="footer">
-            <div class="footer-text">
-                <h2>Get in touch with me!</h2>
-            </div>
-            <div class="footer-links">
-                <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+            <hr class="line"></hr>
+    
+            <div class="footer" id="footer">
+                <div class="footer-text">
+                    <h2>Get in touch with me!</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
+
+       
         <script src="js/scripts.js"></script>
 
     </body>

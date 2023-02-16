@@ -49,106 +49,36 @@
         </div>
         </section>
 
-        
-
-        
         <section class="main" id="main">
             <div class="description">
-                <!-- <h2 class="description-title">When:</h2>
-                <ul class="description-text">
-                    <li>May 2022</li>
-                </ul> -->
-                <!-- <h2 class="description-title">Goals:</h2> -->
                 <ul class="description-text">
                     <li class="description-text__item">Easy to use landing page and portfolio gallery.</li>
                     <li class="description-text__item">Communicate and work with client throughout design and development process to understand and achieve their wants.</li>
                     <li class="description-text__item">Use WordPress to give the client the ability to update and add content in the future.</li>
                 </ul>
-                <!-- <h2 class="description-title">Tools Used:</h2>
-                <ul class="description-text">
-                    <li>HTML5, CSS3, PHP, SASS, Wordpress, jQuery, GIT</li>
-                </ul> -->
             </div>
-            <!-- <div class="description">
-                <h2 class="description-title">Issues Faced</h2>
-                <p class="description-text">The client wanted a portfolio page that would display any assortment of images they chose all at once in a seamless fashion while adapting to any screen size without drastically changing the size of the images or adding empty space on the sides of the page.</p>
+            <div class="links">
+                <div class="links-title">
+                    <h2 class="links-title__text">Check it out!</h2>
+                </div>
+                <div class="links-btn">
+                    <a href="https://geoffmorganphotography.com/"><button class="links-btn__button" type="button">Live</button></a>
+                </div>
             </div>
-            <div class="description">
-                <h2 class="description-title">Solutions Found</h2>
-                <p class="description-text">To create a page that hosted any images they wanted, both landscape and portrait, as well as fitting seamlessly on any screen size, I made use of the CSS grid layout. I first arranged 20 picture elements, each acting as their own row in the grid:</p>
-                <pre><code>
-                    &lt;div class="row"&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_1'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_2'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_3'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_4'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_5'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_6'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_7'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_8'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_9'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_10'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_11'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_14'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_12'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_13'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_15'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_16'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_17'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_18'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_19'); ?&gt;" alt=""&gt;
-                        &lt;img class= "row-img" src="&lt;?php the_field('portfolio_pic_20'); ?&gt;" alt=""&gt;
-                        &lt;/div&gt;
-                </code></pre>
-                <p class="description-text">Then to add the responsiveness, I added CSS that declared the number of columns that should appear depending on the screen size. The larger the screen size the more columns will be displayed, and therefore more pictures will be displayed side by side.</p>
-                <pre><code>
-                    .row {
-                        line-height: 0;
-                        column-count: 1;
-                        column-gap: 5px;
-
-                        @include media-md {
-                            column-count: 2;
-                        }
-
-                        @include media-lg {
-                            column-count: 3;
-                        }
-
-                        @include media-xl {
-                            column-count: 4;
-                        }
-
-                        .row-img {
-                            width: 100%;
-                            height: auto;
-                            margin-bottom: 5px;
-                        }
-                    }
-                </code></pre>
-            </div> -->
-        </section>
-
-        <div class="links">
-            <div class="links-title">
-                <h2 class="links-title__text">Check it out!</h2>
-            </div>
-            <div class="links-btn">
-                <a href="https://geoffmorganphotography.com/"><button class="links-btn__button" type="button">Live</button></a>
-                <!-- <a href="https://github.com/Garrett-J/Geoff_Morgan_Photography"><button class="links-btn__button" type="button">Code</button></a> -->
-            </div>
-        </div>
-        <hr class="line"></hr>
-
-        <section class="footer" id="footer">
-            <div class="footer-text">
-                <h2>Get in touch with me!</h2>
-            </div>
-            <div class="footer-links">
-                <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+            <hr class="line"></hr>
+    
+            <div class="footer" id="footer">
+                <div class="footer-text">
+                    <h2>Get in touch with me!</h2>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:johnson_garrett@hotmail.com"><i class="footer-links__icon fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/garrett-j/"><i class="footer-links__icon fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
+
+        
         <script src="js/scripts.js"></script>
     </body>
 </html>
